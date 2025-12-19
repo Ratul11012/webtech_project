@@ -44,7 +44,22 @@
             margin-top: 100px;
             display: flex;
             flex-wrap: wrap;
+            justify-content:center;
             
+        }
+
+        .main div{
+            border:none;
+            
+         
+        }
+
+        .main a{
+            text-decoration: none;
+            color: white;
+            background-color: green;
+            padding: 2px;
+            margin: 2px;
         }
 
         .footer{
@@ -93,10 +108,9 @@
         <img src="" alt="">
         <p>product title </p>
         <p>product description</p>
-        <p>product pric </p>
+        <p>product quantity </p>
         <p>product price </p>
-
-
+        <a href="#">Buy Now</a>
     </div>
 
     </main>
