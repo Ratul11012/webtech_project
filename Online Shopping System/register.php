@@ -4,22 +4,38 @@
     <title>Document</title>
     <style>
     .registerdiv{
+        margin-top: 200px;
         display: flex;
         flex-wrap:wrap;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         
     }
-    .registerdiv a{
-        display: block;
-        text-align: center;
+    .shoplink{
         text-decoration: none;
-        background-color: lightgreen;
+        font-size: 20px;
+        margin-left: 20px;
+        background-color: green;
+        color: white;
         padding: 10px;
+       
+        text-align: center;
+
+       
+         
     }
 
 .registerdiv input{
     display: block;
+    padding: 15px;
+    margin: 8px;
+
+
+}
+.registerdiv textarea{
+    display: block;
+    padding: 15px;
+    margin: 8px;
 
 }
 
@@ -27,9 +43,10 @@
     </head>
     <body>
     
+<a class="shoplink" href="index.php">Shop</a>
+
 <div class="registerdiv">
-    <a href="index.php">Shop</a>
- 
+     
     <form action="register.php"  method="post">
     <input type="text" name="name" placeholder="Enter your name here!" required>
      <input type="email" name="email" placeholder="Enter your email here!" required>
