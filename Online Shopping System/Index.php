@@ -9,6 +9,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            overflow-x: hidden;
         }
 
         .header{
@@ -16,7 +17,10 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 30px;      
+                padding: 30px;     
+                position: fixed;
+                width: 100%;
+                top: 0; 
         }
 
         .header ul li{
@@ -32,7 +36,7 @@
 
         .header li{
             display: inline-block;
-            margin:10px;
+            margin-right:50px;
 
         }
 
