@@ -48,19 +48,33 @@
             
         }
 
-        .main div{
+        .product{
             border:none;
+            max-width: 300px;
+            padding: 30px;
+            text-align: center;
             
          
         }
 
-        .main a{
+          .product a{
+            display: block;
             text-decoration: none;
-            color: white;
-            background-color: green;
-            padding: 2px;
-            margin: 2px;
+            color: black;
+            background-color: greenyellow;
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+
+            
         }
+        
+        .product a:hover{
+            background-color: darkorange;
+        }
+
+        
+        
 
         .footer{
             display: flex;
@@ -104,14 +118,24 @@
 
     <main class="main"> 
 
-    <div> 
+    <div class="product"> 
         <img src="" alt="">
-        <p>product title </p>
+        <h2>product title </h2>
         <p>product description</p>
         <p>product quantity </p>
         <p>product price </p>
         <a href="#">Buy Now</a>
     </div>
+
+      <div class="product"> 
+        <img src="" alt="">
+        <h2>product title </h2>
+        <p>product description</p>
+        <p>product quantity </p>
+        <p>product price </p>
+        <a href="#">Buy Now</a>
+    </div>
+
 
     </main>
 
