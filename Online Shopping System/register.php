@@ -15,6 +15,12 @@
         background-color: lightgreen;
         padding: 10px;
     }
+
+.registerdiv input{
+    display: block;
+
+}
+
 </style>
     </head>
     <body>
