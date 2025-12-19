@@ -6,11 +6,13 @@
     .registerdiv{
         display: flex;
         flex-wrap:wrap;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
         
     }
     .registerdiv a{
+        display: block;
+        text-align: center;
         text-decoration: none;
         background-color: lightgreen;
         padding: 10px;
