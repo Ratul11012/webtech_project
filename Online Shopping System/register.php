@@ -1,22 +1,22 @@
-
 <?php
-include "db.php"    ;
-
-if($isset($_post['submit'])){
-    $name = $_post['name'];
-    $email = $_post['email'];
-    $password = $_post['password'];
-    $phone = $_post['phone'];
-    $address = $_post['address'];
+include "db.php" ;
+if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
     $role= "user";
 
-    $sql ="insert into users(name,email,password,phone,address,role) 
-    values('$name','$email','$password','$phone','$address','$role')";
+    $sql ="insert into users(name,email,password,
+    phone,address,role) 
+    values('$name','$email','$password',
+    '$phone','$address','$role')";
     $result = mysqli_query($conn,$sql);
-    if($result){
+    if(!$result){
         echo "Error!:{ $conn->error}";
    
-}
+     }
   else{
     echo"Registered Successfully";
   }
