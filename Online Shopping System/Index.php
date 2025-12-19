@@ -52,6 +52,7 @@
             border:none;
             max-width: 300px;
             padding: 30px;
+            text-align: center;
             
          
         }
@@ -59,10 +60,12 @@
           .product a{
             display: block;
             text-decoration: none;
-            color: white;
+            color: black;
             background-color: greenyellow;
             padding: 10px;
             width: 100%;
+            margin-top: 10px;
+
             
         }
         
@@ -70,10 +73,7 @@
             background-color: darkorange;
         }
 
-        .product p{
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
+        
         
 
         .footer{
