@@ -42,9 +42,9 @@
     <a href="index.php">SHOP</a>
     <nav> 
     <ul>
-    
-        <li> <a href="">LOGIN </a> </li>
-        <li> <a href="">SIGNUP </a> </li>
+
+        <li> <a href=" ">LOGIN </a> </li>
+        <li> <a href="register.php">SIGNUP </a> </li>
         <li> <a href="">DASHBOARD </a> </li>
      
     </ul>
