@@ -4,7 +4,27 @@
         <title>Online Shopping System</title>
     </head>
     <body>
-        <h1>Welcome to Our Online Shopping System</h1>
-        <p>Explore our products and enjoy shopping!</p>
+
+    <header>
+    <a href="index.php">SHOP</a>
+    <nav> 
+    <ul>
+    
+        <li> <a href="">LOGIN </a> </li>
+        <li> <a href="">SIGNUP </a> </li>
+        <li> <a href="">DASHBOARD </a> </li>
+     
+    </ul>
+    </nav>
+    </header>
+
+
+    <main> 
+
+
+
+    </main>
+
+    
     </body>
 </html>
