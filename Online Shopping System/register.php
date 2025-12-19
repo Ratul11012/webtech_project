@@ -2,9 +2,35 @@
 <html>  
     <head> 
     <title>Document</title>
+    <style>
+    .registerdiv{
+        display: flex;
+        flex-wrap:wrap;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .registerdiv a{
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        background-color: lightgreen;
+        padding: 10px;
+    }
+
+.registerdiv input{
+    display: block;
+
+}
+
+</style>
     </head>
     <body>
-<form action="register.php"  method="post">
+    
+<div class="registerdiv">
+    <a href="index.php">Shop</a>
+ 
+    <form action="register.php"  method="post">
     <input type="text" name="name" placeholder="Enter your name here!" required>
      <input type="email" name="email" placeholder="Enter your email here!" required>
         <input type="password" name="password" placeholder="Enter your password here!" required>
@@ -12,6 +38,10 @@
          <textarea name ="address" placeholder="Enter your address here!" required></textarea>
          <input type="submit" name="submit" value="sign up"> 
 </form>
+ 
+</div>
+
+
 
 </body>
 </html>
