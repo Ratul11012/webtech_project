@@ -40,17 +40,23 @@
 
         }
 
+        .main{
+            margin-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+
         .footer{
             display: flex;
             justify-content: center;
+            align-items: center;
             flex-direction: column;
             background-color: lightblue;
             position: fixed;
             bottom: 0;
             padding: 2px;
             width: 100%;
-            
-
         }
 
         .footer p{
@@ -81,8 +87,17 @@
     </header>
 
 
-    <main> 
+    <main class="main"> 
 
+    <div> 
+        <img src="" alt="">
+        <p>product title </p>
+        <p>product description</p>
+        <p>product pric </p>
+        <p>product price </p>
+
+
+    </div>
 
     </main>
 
