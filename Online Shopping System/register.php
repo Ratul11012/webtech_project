@@ -21,8 +21,7 @@
     
 <div class="registerdiv">
     <a href="index.php">Shop</a>
-<div>  
-    
+ 
     <form action="register.php"  method="post">
     <input type="text" name="name" placeholder="Enter your name here!" required>
      <input type="email" name="email" placeholder="Enter your email here!" required>
@@ -31,7 +30,7 @@
          <textarea name ="address" placeholder="Enter your address here!" required></textarea>
          <input type="submit" name="submit" value="sign up"> 
 </form>
-</div>
+ 
 </div>
 
 
