@@ -1,5 +1,7 @@
 
 <?php
+include "db.php"    ;
+
 if($isset($_post['submit'])){
     $name = $_post['name'];
     $email = $_post['email'];
@@ -8,14 +10,23 @@ if($isset($_post['submit'])){
     $address = $_post['address'];
     $role= "user";
 
-    
+    $sql ="insert into users(name,email,password,phone,address,role) 
+    values('$name','$email','$password','$phone','$address','$role')";
+    $result = mysqli_query($conn,$sql);
+    if($result){
+        echo "Error!:{ $conn->error}";
+   
+}
+  else{
+    echo"Registered Successfully";
+  }
 }
 ?>
 
 
 <!DOCTYPE html>
 <html>  
-    <head> 
+    <head>
     <title>Document</title>
     <style>
     .registerdiv{
