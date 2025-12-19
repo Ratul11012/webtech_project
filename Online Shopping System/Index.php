@@ -40,6 +40,25 @@
 
         }
 
+        .footer{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            background-color: lightblue;
+            position: fixed;
+            bottom: 0;
+            padding: 2px;
+            width: 100%;
+            
+
+        }
+
+        .footer p{
+            text-align: center;
+            font-size: 14px;
+            color: black;
+        }
+
 
 
         </style>
@@ -65,8 +84,14 @@
     <main> 
 
 
-
     </main>
+
+
+    <footer class="footer">
+
+        <p>&copy; 2025 Online Shopping System. All rights reserved.</p>
+
+    </footer>
 
 
     </body>
