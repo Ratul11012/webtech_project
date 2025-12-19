@@ -1,3 +1,18 @@
+
+<?php
+if($isset($_post['submit'])){
+    $name = $_post['name'];
+    $email = $_post['email'];
+    $password = $_post['password'];
+    $phone = $_post['phone'];
+    $address = $_post['address'];
+    $role= "user";
+
+    
+}
+?>
+
+
 <!DOCTYPE html>
 <html>  
     <head> 
@@ -36,7 +51,19 @@
     display: block;
     padding: 15px;
     margin: 8px;
+    width: 162px;
 
+}
+.button{
+    width: 200px;
+    background-color: lightcoral;
+    border: none;
+
+}
+button:hover{
+    background-color: darkorange;
+   
+    
 }
 
 </style>
@@ -53,7 +80,7 @@
         <input type="password" name="password" placeholder="Enter your password here!" required>
         <input type="text" name="phone" placeholder="Enter your phone number here!" required>
          <textarea name ="address" placeholder="Enter your address here!" required></textarea>
-         <input type="submit" name="submit" value="sign up"> 
+         <input class="button" type="submit" name="submit" value="sign up"> 
 </form>
  
 </div>
