@@ -57,13 +57,23 @@
         }
 
           .product a{
+            display: block;
             text-decoration: none;
             color: white;
-            background-color: green;
+            background-color: greenyellow;
             padding: 10px;
-            margin:5px;
+            width: 100%;
+            
         }
         
+        .product a:hover{
+            background-color: darkorange;
+        }
+
+        .product p{
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
         
 
         .footer{
