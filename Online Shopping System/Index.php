@@ -30,7 +30,13 @@
             margin-left: 20px;
         }
 
-        
+        .header li{
+            display: inline-block;
+            margin:10px;
+
+        }
+
+
 
         </style>
 
