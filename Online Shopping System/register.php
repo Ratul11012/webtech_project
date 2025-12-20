@@ -50,7 +50,11 @@ button:hover{
    
     
 }
+.registerdiv a{
+    color: black;
+    margin-left: 5px;
 
+   }
 </style>
     </head>
     <body>
