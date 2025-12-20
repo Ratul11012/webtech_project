@@ -65,7 +65,6 @@
             letter-spacing: 2px;
             text-align: center;
             flex-grow:1;
-            color: #FF1493;
             
         }
 
@@ -172,13 +171,15 @@
 
         </style>
 
-
     </head>
+
+
     <body>
 
     <header class="header">
     <a href="index.php">SHOP</a>
-    <a href="index.php"  class="brandName" style="font-size: 20px;"> ASHTASY </a>
+    <a href="index.php"  class="brandName" style="font-size: 24px; color: #ffd752ff;"> ASHTASY </a>       
+    
     <nav> 
     <ul>
 
