@@ -103,12 +103,19 @@
             background-color: darkorange;
         }
 
-        product h2{
+        .product h2{
             margin: 15px 0;
             font-size: 18px;
             color: #333;
             font-weight: bold;
         }
+
+
+        .product p{
+            fomnt-size: 14px;
+            color: #666;
+        }
+
 
 
         /* Product Image Styling */ 
@@ -120,10 +127,11 @@
             border-bottom: 2px solid black;
         }
 
-        .productPrice{
+        .product .productPrice{
             font-weight: bold;
-            font-size: 20px;
-            color: darkred;
+            font-size: 18px;
+            color: #E74C3C; 
+            margin: 10px 0;
         }
         
         
@@ -131,15 +139,14 @@
         /* Footer Styling */
 
         .footer{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            text-align: center;
             background-color: lightblue;
-            position: fixed;
+            color: white;
+            position:sticky;
             bottom: 0;
-            padding: 2px;
+            padding: 5px;
             width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .footer p{
