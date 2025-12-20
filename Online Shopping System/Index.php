@@ -178,7 +178,11 @@
 
     <header class="header">
     <a href="index.php">SHOP</a>
+<<<<<<< Updated upstream
     <a href="index.php"  class="brandName" style="font-size: 24px; color: #D4AF37;"> ASHTASY </a>       
+=======
+    <a href="index.php"  class="brandName" style="font-size: 24px; color: #ffd752ff;"> aa </a>       
+>>>>>>> Stashed changes
     
     <nav> 
     <ul>
