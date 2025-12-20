@@ -5,7 +5,7 @@
     <style>
 
     body{
-        background-color: lightgray;
+        background-color: #0d1553a7;
         font-family: Arial, sans-serif;
         color: #333;
 
@@ -21,17 +21,16 @@
         justify-content: center;
         
     }
-    .shoplink{
-        text-decoration: none;
-        font-size: 20px;
-        margin-left: 20px;
-        background-color: green;
-        color: white;
-        padding: 10px;
-        margin-top: 10px;
-        
-        margin-bottom: 10px;
-        text-align: center;
+    .brandName{
+       font-size: 24px; 
+       color: #ffd752ff;
+         text-decoration: none;
+            font-family:'lucida handwriting', cursive;
+            margin-left: 20px;
+            position: fixed;
+            top: 10px;
+            left: 20px;
+            
         
 
        
@@ -50,7 +49,7 @@
     padding: 15px;
     margin: 8px;
     width: 162px;
-    
+
 
 }
 .button{
@@ -102,8 +101,10 @@ if(isset($_POST['submit'])){
 
 }
 ?>
+
+    <a href="index.php"  class="brandName" > ASHTASY </a>    
     
-<a class="shoplink" href="index.php">Shop</a>
+
 
 <div class="registerdiv">
      
