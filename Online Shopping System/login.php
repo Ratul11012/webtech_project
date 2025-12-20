@@ -18,6 +18,17 @@ padding: 30px;
 
 
    }
+
+  body{
+    background-color: #f2dede;
+    
+    color: #924848ff;
+    font-family: Arial, sans-serif;
+
+    
+    
+  }
+
    .login input{
 
     display: block;
