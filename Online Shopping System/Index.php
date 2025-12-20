@@ -96,7 +96,6 @@
             padding: 10px;
             width: 100%;
             margin-top: 10px;
-
             
         }
         
@@ -104,12 +103,21 @@
             background-color: darkorange;
         }
 
+        product h2{
+            margin: 15px 0;
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+        }
 
 
         /* Product Image Styling */ 
 
         .product img{
-            width: 130px;
+            width: 100px;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid black;
         }
 
         .productPrice{
