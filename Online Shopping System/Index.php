@@ -181,6 +181,25 @@
         <a href="#">Buy Now</a>
     </div>
 
+    
+    <div class="product"> 
+        <img src="productImg/hoodie7.jpg" alt="productImg">
+        <h2>product title </h2>
+        <p>product description</p>
+        <p>product quantity </p>
+        <p>product price </p>
+        <a href="#">Buy Now</a>
+    </div>
+
+      <div class="product"> 
+        <img src="productImg/hoodie8.jpg" alt="productImg">
+        <h2>product title </h2>
+        <p>product description</p>
+        <p>product quantity </p>
+        <p>product price </p>
+        <a href="#">Buy Now</a>
+    </div>
+
 
     </main>
 
