@@ -10,17 +10,24 @@
             padding: 0;
             box-sizing: border-box;
             overflow-x: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .body{
+            background-color: lightgray;
+            color:#333;
         }
 
         .header{
-                background-color: gray;
+                background-color:  #0d1553a7;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 30px;     
+                padding: 20px 30px;     
                 position: fixed;
                 width: 100%;
                 top: 0; 
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .header ul li{
@@ -31,6 +38,7 @@
             text-decoration: none;
             color: white;
             font-size: 12px;
+            font-weight: bold;
             margin-left: 20px;
         }
 
@@ -45,11 +53,14 @@
             display: flex;
             flex-wrap: wrap;
             justify-content:center;
+            margin-bottom: 90px;
+
             
         }
 
         .product{
-            border:none;
+            margin: 20px;
+            border: 2px solid black;
             max-width: 300px;
             padding: 30px;
             text-align: center;
@@ -74,12 +85,18 @@
         }
 
 
+
         /* Product Image Styling */ 
 
         .product img{
             width: 130px;
         }
 
+        .productPrice{
+            font-weight: bold;
+            font-size: 20px;
+            color: darkred;
+        }
         
         
 
@@ -130,7 +147,7 @@
         <h2>product title </h2>
         <p>product description</p>
         <p>product quantity </p>
-        <p>product price </p>
+        <p class="productPrice">product price </p>
         <a href="#">Buy Now</a>
     </div>
 
@@ -139,7 +156,7 @@
         <h2>product title </h2>
         <p>product description</p>
         <p>product quantity </p>
-        <p>product price </p>
+        <p class="productPrice">product price </p>
         <a href="#">Buy Now</a>
     </div>
 
@@ -149,7 +166,7 @@
         <h2>product title </h2>
         <p>product description</p>
         <p>product quantity </p>
-        <p>product price </p>
+        <p class="productPrice">product price </p>
         <a href="#">Buy Now</a>
     </div>
 
@@ -158,7 +175,7 @@
         <h2>product title </h2>
         <p>product description</p>
         <p>product quantity </p>
-        <p>product price </p>
+        <p class="productPrice">product price </p>
         <a href="#">Buy Now</a>
     </div>
 
@@ -168,7 +185,7 @@
         <h2>product title </h2>
         <p>product description</p>
         <p>product quantity </p>
-        <p>product price </p>
+        <p class="productPrice">product price </p>
         <a href="#">Buy Now</a>
     </div>
 
@@ -177,7 +194,7 @@
         <h2>product title </h2>
         <p>product description</p>
         <p>product quantity </p>
-        <p>product price </p>
+        <p class="productPrice">product price </p>
         <a href="#">Buy Now</a>
     </div>
 
@@ -187,7 +204,7 @@
         <h2>product title </h2>
         <p>product description</p>
         <p>product quantity </p>
-        <p>product price </p>
+        <p class="productPrice">product price </p>
         <a href="#">Buy Now</a>
     </div>
 
@@ -196,7 +213,7 @@
         <h2>product title </h2>
         <p>product description</p>
         <p>product quantity </p>
-        <p>product price </p>
+        <p class="productPrice">product price </p>
         <a href="#">Buy Now</a>
     </div>
 
@@ -206,18 +223,11 @@
         <h2>product title </h2>
         <p>product description</p>
         <p>product quantity </p>
-        <p>product price </p>
+        <p class="productPrice">product price </p>
         <a href="#">Buy Now</a>
     </div>
 
-      <div class="product"> 
-        <img src="productImg/hoodie10.jpeg" alt="productImg">
-        <h2>product title </h2>
-        <p>product description</p>
-        <p>product quantity </p>
-        <p>product price </p>
-        <a href="#">Buy Now</a>
-    </div>
+
 
 
     </main>
