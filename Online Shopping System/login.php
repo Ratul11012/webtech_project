@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>  
     <head>
-    <title>Document</title>
+    <title>ASHTASY</title>
 <style>
    .login{
 display: flex;
@@ -20,7 +20,7 @@ padding: 30px;
    }
 
   body{
-    background-color: #f2dede;
+    background-color: #0d1553a7;
     
     color: #924848ff;
     font-family: Arial, sans-serif;
@@ -28,6 +28,23 @@ padding: 30px;
     
     
   }
+
+  .brandName{
+       font-size: 24px; 
+       color: #ffd752ff;
+         text-decoration: none;
+            font-family:'lucida handwriting', cursive;
+            margin-left: 20px;
+            position: fixed;
+            top: 10px;
+            left: 20px;
+            
+        
+
+       
+         
+    }
+
 
    .login input{
 
@@ -95,7 +112,7 @@ padding: 30px;
 
 
 
-
+     <a href="index.php"  class="brandName" > ASHTASY </a> 
         <div class="login">
 
       
