@@ -178,7 +178,7 @@
 
     <header class="header">
     <a href="index.php">SHOP</a>
-    <a href="index.php"  class="brandName" style="font-size: 24px; color: #ffd752ff;"> ASHTASY </a>       
+    <a href="index.php"  class="brandName" style="font-size: 24px; color: #D4AF37;"> ASHTASY </a>       
     
     <nav> 
     <ul>
@@ -287,7 +287,7 @@
 
     <footer class="footer">
 
-        <p>&copy; 2025 Online Shopping System. All rights reserved.</p>
+        <p>&copy; 2025 ASHTASY BD, ALL RIGHTS RESERVED. DESIGNED & DEVELOPED BY MUSTAKIM & FAHIM.</p>
 
     </footer>
 
