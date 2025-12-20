@@ -94,7 +94,7 @@ if(isset($_POST['submit'])){
     <input type="text" name="phone" placeholder="Enter your phone number here!" required>
     <textarea name ="address" placeholder="Enter your address here!" required></textarea>
     <input class="button" type="submit" name="submit" value="sign up">
-    <p>go to login<a href="login.php"> LOGIN</a></p> 
+    <p>Go To Login<a href="login.php"> LOGIN</a></p> 
 </form>
  
 </div>
