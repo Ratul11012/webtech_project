@@ -55,33 +55,44 @@
             color: orange;
         }
 
+
+
         /* Main Content Styling */
 
         .main{
             margin-top: 100px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content:center;
-            margin-bottom: 90px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            padding: 20px;
 
             
         }
 
         .product{
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12x rgba(0, 0, 0, 0.1);
             margin: 20px;
             border: 2px solid black;
             max-width: 300px;
             padding: 30px;
             text-align: center;
-            
-         
+
+        }
+
+        .product:hover{
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
         }
 
           .product a{
-            display: block;
+            display:block;
             text-decoration: none;
             color: black;
-            background-color: greenyellow;
+            background-color: #5e94b8ff;
             padding: 10px;
             width: 100%;
             margin-top: 10px;
@@ -108,6 +119,8 @@
         }
         
         
+   
+        /* Footer Styling */
 
         .footer{
             display: flex;
