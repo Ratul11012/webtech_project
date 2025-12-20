@@ -16,18 +16,20 @@ left: 40%;
 padding: 30px;
 
 
-
    }
-
-  body{
-    background-color: #0d1553a7;
-    
+   
+   body {
+    background-image: url('productImg/background image.jpeg'); /* Use the image name here */
+    background-size: cover; /* Make sure the image covers the entire screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
     color: #924848ff;
     font-family: Arial, sans-serif;
+}
 
-    
-    
-  }
+
+
+  
 
   .brandName{
        font-size: 24px; 
@@ -103,20 +105,15 @@ padding: 30px;
         echo "Invalid email or password" ;
 
 
-
     }
 
    }
 
 ?> 
 
-
-
      <a href="index.php"  class="brandName" > ASHTASY </a> 
         <div class="login">
-
-      
-        <form action="login.php" method="post">
+       <form action="login.php" method="post">
         <input type="email" name="email" placeholder="Enter your email here!" required>
         <input type="password" name="password" placeholder="Enter your password here!" required>
         <input class="button" type="submit" name="submit" value="login">
