@@ -1,32 +1,4 @@
-<?php
-     include "db.php" ;
-     session_start() ;
 
-   if(isset($_POST['submit'])){
-   
-    $email = $_POST['email'] ;
-    $password = $_POST['password'] ;
-
-    $sql = "SELECT * FROM users WHERE email='$email' AND password='$password' " ;
-    $result = mysqli_query($conn, $sql) ;
-
-    if($result->num_rows){
-        $row=mysqli_fetch_assoc($result) ;
-        if($row['password']==$password);
-        $_SESSION['user_id'] = $row['id'] ;
-        $_SESSION['user_name'] = $row['name'] ;
-        $_SESSION['user_role'] = $row['role'] ;
-    }
-    else{
-        echo "Invalid email or password" ;
-
-
-
-    }
-
-   }
-
-?>
 
 <!DOCTYPE html>
 <html>  
@@ -79,6 +51,40 @@ padding: 30px;
 
     </head>
     <body> 
+
+    <?php
+     include "db.php" ;
+     session_start() ;
+
+   if(isset($_POST['submit'])){
+   
+    $email = $_POST['email'] ;
+    $password = $_POST['password'] ;
+
+    $sql = "SELECT * FROM users WHERE email='$email' AND password='$password' " ;
+    $result = mysqli_query($conn, $sql) ;
+
+    if($result->num_rows){
+        $row=mysqli_fetch_assoc($result) ;
+        if($row['password']==$password);
+        $_SESSION['user_id'] = $row['id'] ;
+        $_SESSION['user_name'] = $row['name'] ;
+        $_SESSION['user_role'] = $row['role'] ;
+    }
+    else{
+        echo "Invalid email or password" ;
+
+
+
+    }
+
+   }
+
+?> 
+
+
+
+
         <div class="login">
 
       
