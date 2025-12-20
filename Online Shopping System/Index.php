@@ -284,27 +284,42 @@
      <div class="product"> 
         <img src="productImg/jacket4.jpeg" alt="productImg">
         <h2>ASHTASY JACKET</h2>
-        <p>White “PROVIDENCE” print jacket, casual fit.</p>
-        <p class="productPrice">TK. 2199 </p>
+        <p>Light grey zip-up fleece jacket, casual.</p>
+        <p class="productPrice">TK. 5099 </p>
         <a href="#">Buy Now</a>
     </div>
 
     <div class="product"> 
         <img src="productImg/jacket2.jpg" alt="productImg">
         <h2>ASHTASY JACKET</h2>
-        <p>White “PROVIDENCE” print jacket, casual fit.</p>
-        <p class="productPrice">TK. 2199 </p>
+        <p>Black faux-leather biker jacket with stand collar.</p>
+        <p class="productPrice">TK.8999 </p>
         <a href="#">Buy Now</a>
     </div>
 
     <div class="product"> 
         <img src="productImg/jacket3.jpg" alt="productImg">
         <h2>ASHTASY JACKET</h2>
-        <p>White “PROVIDENCE” print jacket, casual fit.</p>
-        <p class="productPrice">TK. 2199 </p>
+        <p>Oversized light grey zip-up windbreaker jacket.</p>
+        <p class="productPrice">TK. 5099 </p>
         <a href="#">Buy Now</a>
     </div>
 
+    <div class="product"> 
+        <img src="productImg/jacket5.jpeg" alt="productImg">
+        <h2>ASHTASY JACKET</h2>
+        <p>Navy quilted sleeveless puffer zip-up jacket.</p>
+        <p class="productPrice">TK. 3000 </p>
+        <a href="#">Buy Now</a>
+    </div>
+
+    <div class="product"> 
+        <img src="productImg/jacket6.jpeg" alt="productImg">
+        <h2>ASHTASY JACKET</h2>
+        <p>Black track jacket with contrast sleeve piping.</p>
+        <p class="productPrice">TK. 3856 </p>
+        <a href="#">Buy Now</a>
+    </div>
 
 
     </main>
