@@ -55,6 +55,18 @@
             color: orange;
         }
 
+        /*// Brand Name Styling */
+        .brandName{
+            font-family:'lucida handwriting', cursive;
+            font-weight: bold;
+            color: white;
+            margin-right: auto;
+            text-decoration: none;
+            letter-spacing: 2px;
+            text-align: center;
+            flex-grow:1;
+            
+        }
 
 
         /* Main Content Styling */
@@ -165,6 +177,7 @@
 
     <header class="header">
     <a href="index.php">SHOP</a>
+    <a href="index.php"  class="brandName" style="font-size: 20px;"> ASHTASY </a>
     <nav> 
     <ul>
 
