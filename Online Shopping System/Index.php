@@ -196,90 +196,81 @@
 
     <div class="product"> 
         <img src="productImg/hoodie1.jpg" alt="productImg">
-        <h2>product title </h2>
-        <p>product description</p>
-        <p>product quantity </p>
-        <p class="productPrice">product price </p>
+        <h2>ASHTASY HOODIE</h2>
+        <p>Comfortable levander hoodie for casual wear.</p>
+        <p class="productPrice">TK. 3999 </p>
         <a href="#">Buy Now</a>
     </div>
 
 
     <div class="product"> 
         <img src="productImg/hoodie2.jpg" alt="productImg">
-        <h2>product title </h2>
-        <p>product description</p>
-        <p>product quantity </p>
-        <p class="productPrice">product price </p>
+        <h2>ASHTASY HOODIE</h2>
+        <p> stylish black hoodie perfect for casual wear.</p>
+        <p class="productPrice">TK. 2899 </p>
         <a href="#">Buy Now</a>
     </div>
 
 
     <div class="product"> 
         <img src="productImg/hoodie3.jpg" alt="productImg">
-        <h2>product title </h2>
-        <p>product description</p>
-        <p>product quantity </p>
-        <p class="productPrice">product price </p>
+        <h2>ASHTASY HOODIE </h2>
+        <p>Solid beige hoodie perfect for casual wear.</p>
+        <p class="productPrice">TK. 3599 </p>
         <a href="#">Buy Now</a>
     </div>
 
 
     <div class="product"> 
         <img src="productImg/hoodie4.jpg" alt="productImg">
-        <h2>product title </h2>
-        <p>product description</p>
-        <p>product quantity </p>
-        <p class="productPrice">product price </p>
+        <h2>ASHTASY HOODIE</h2>
+        <p>Cozy charcoal hoodie for effortless everyday style.</p>
+        <p class="productPrice">TK. 1599 </p>
         <a href="#">Buy Now</a>
     </div>
 
     
     <div class="product"> 
         <img src="productImg/hoodie5.jpg" alt="productImg">
-        <h2>product title </h2>
-        <p>product description</p>
-        <p>product quantity </p>
-        <p class="productPrice">product price </p>
+        <h2>ASHTASY HOODIE</h2>
+        <p>Cream marble hoodie, effortlessly cool comfort.</p>
+        <p class="productPrice">TK. 2199 </p>
         <a href="#">Buy Now</a>
     </div>
 
 
     <div class="product"> 
         <img src="productImg/hoodie6.jpg" alt="productImg">
-        <h2>product title </h2>
-        <p>product description</p>
-        <p>product quantity </p>
-        <p class="productPrice">product price </p>
+        <h2>ASHTASY HOODIE</h2>
+        <p>Rich mocha hoodie, minimal and effortlessly relaxed.</p>
+        <p class="productPrice">TK. 3999 </p>
         <a href="#">Buy Now</a>
     </div>
 
     
     <div class="product"> 
         <img src="productImg/hoodie7.jpg" alt="productImg">
-        <h2>product title </h2>
-        <p>product description</p>
-        <p>product quantity </p>
-        <p class="productPrice">product price </p>
+        <h2>ASHTASY HOODIE</h2>
+        <p>Oversized black quarter-zip hoodie, minimalist design.</p>
+        <p class="productPrice">TK. 3799 </p>
         <a href="#">Buy Now</a>
     </div>
 
 
     <div class="product"> 
         <img src="productImg/hoodie8.jpg" alt="productImg">
-        <h2>product title </h2>
-        <p>product description</p>
-        <p>product quantity </p>
-        <p class="productPrice">product price </p>
+        <h2>ASHTASY HOODIE</h2>
+        <p>Mustard hoodie with 3D black spine graphic.</p>
+        <p class="productPrice">TK. 1849 </p>
         <a href="#">Buy Now</a>
     </div>
 
     
     <div class="product"> 
         <img src="productImg/hoodie9.jpeg" alt="productImg">
-        <h2>product title </h2>
-        <p>product description</p>
-        <p>product quantity </p>
-        <p class="productPrice">product price </p>
+        <h2>ASHTASY HOODIE</h2>
+        <p>White “PROVIDENCE” print hoodie, casual fit.</p>
+        <p class="productPrice">TK. 2199 </p>
         <a href="#">Buy Now</a>
     </div>
 
@@ -327,7 +318,7 @@
         <p class="productPrice">TK. 3000 </p>
         <a href="#">Buy Now</a>
     </div>
-    
+
 
     <div class="product"> 
         <img src="productImg/jacket6.jpeg" alt="productImg">
@@ -343,7 +334,7 @@
 
     <footer class="footer">
 
-        <p>&copy; 2025 Online Shopping System. All rights reserved.</p>
+        <p>&copy; 2025 ASHTASY BD, ALL RIGHTS RESERVED. DESIGNED & DEVELOPED BY MUSTAKIM & FAHIM.</p>
 
     </footer>
 
