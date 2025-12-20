@@ -73,6 +73,13 @@
             background-color: darkorange;
         }
 
+
+        /* Product Image Styling */ 
+
+        .product img{
+            width: 130px;
+        }
+
         
         
 
@@ -119,7 +126,7 @@
     <main class="main"> 
 
     <div class="product"> 
-        <img src="" alt="">
+        <img src="productImg/hoodie1.jpg" alt="productImg">
         <h2>product title </h2>
         <p>product description</p>
         <p>product quantity </p>
@@ -128,7 +135,45 @@
     </div>
 
       <div class="product"> 
-        <img src="" alt="">
+        <img src="productImg/hoodie2.jpg" alt="productImg">
+        <h2>product title </h2>
+        <p>product description</p>
+        <p>product quantity </p>
+        <p>product price </p>
+        <a href="#">Buy Now</a>
+    </div>
+
+    
+    <div class="product"> 
+        <img src="productImg/hoodie3.jpg" alt="productImg">
+        <h2>product title </h2>
+        <p>product description</p>
+        <p>product quantity </p>
+        <p>product price </p>
+        <a href="#">Buy Now</a>
+    </div>
+
+      <div class="product"> 
+        <img src="productImg/hoodie4.jpg" alt="productImg">
+        <h2>product title </h2>
+        <p>product description</p>
+        <p>product quantity </p>
+        <p>product price </p>
+        <a href="#">Buy Now</a>
+    </div>
+
+    
+    <div class="product"> 
+        <img src="productImg/hoodie5.jpg" alt="productImg">
+        <h2>product title </h2>
+        <p>product description</p>
+        <p>product quantity </p>
+        <p>product price </p>
+        <a href="#">Buy Now</a>
+    </div>
+
+      <div class="product"> 
+        <img src="productImg/hoodie6.jpg" alt="productImg">
         <h2>product title </h2>
         <p>product description</p>
         <p>product quantity </p>
