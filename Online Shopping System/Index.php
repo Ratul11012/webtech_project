@@ -65,6 +65,7 @@
             letter-spacing: 2px;
             text-align: center;
             flex-grow:1;
+            color: #FF1493;
             
         }
 
