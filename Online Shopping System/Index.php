@@ -18,6 +18,8 @@
             color:#333;
         }
 
+        /* Header Styling */
+
         .header{
                 background-color:  #0d1553a7;
                 display: flex;
@@ -30,9 +32,6 @@
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .header ul li{
-            list-style: none;
-        }
         
         .header a{
             text-decoration: none;
@@ -42,11 +41,21 @@
             margin-left: 20px;
         }
 
+        .header ul{
+            display: flex;
+            list-style: none;
+        }
+
         .header li{
-            display: inline-block;
             margin-right:50px;
 
         }
+
+        .header a:hover{
+            color: orange;
+        }
+
+        /* Main Content Styling */
 
         .main{
             margin-top: 100px;
