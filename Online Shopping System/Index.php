@@ -203,7 +203,8 @@
         <a href="#">Buy Now</a>
     </div>
 
-      <div class="product"> 
+
+    <div class="product"> 
         <img src="productImg/hoodie2.jpg" alt="productImg">
         <h2>product title </h2>
         <p>product description</p>
@@ -212,7 +213,7 @@
         <a href="#">Buy Now</a>
     </div>
 
-    
+
     <div class="product"> 
         <img src="productImg/hoodie3.jpg" alt="productImg">
         <h2>product title </h2>
@@ -222,7 +223,8 @@
         <a href="#">Buy Now</a>
     </div>
 
-      <div class="product"> 
+
+    <div class="product"> 
         <img src="productImg/hoodie4.jpg" alt="productImg">
         <h2>product title </h2>
         <p>product description</p>
@@ -241,7 +243,8 @@
         <a href="#">Buy Now</a>
     </div>
 
-      <div class="product"> 
+
+    <div class="product"> 
         <img src="productImg/hoodie6.jpg" alt="productImg">
         <h2>product title </h2>
         <p>product description</p>
@@ -260,7 +263,8 @@
         <a href="#">Buy Now</a>
     </div>
 
-      <div class="product"> 
+
+    <div class="product"> 
         <img src="productImg/hoodie8.jpg" alt="productImg">
         <h2>product title </h2>
         <p>product description</p>
@@ -279,7 +283,6 @@
         <a href="#">Buy Now</a>
     </div>
 
-
         
     <div class="product"> 
         <img src="productImg/jacket1.jpg" alt="productImg">
@@ -289,6 +292,7 @@
         <a href="#">Buy Now</a>
     </div>
 
+
      <div class="product"> 
         <img src="productImg/jacket4.jpeg" alt="productImg">
         <h2>ASHTASY JACKET</h2>
@@ -296,6 +300,7 @@
         <p class="productPrice">TK. 5099 </p>
         <a href="#">Buy Now</a>
     </div>
+
 
     <div class="product"> 
         <img src="productImg/jacket2.jpg" alt="productImg">
@@ -305,6 +310,7 @@
         <a href="#">Buy Now</a>
     </div>
 
+
     <div class="product"> 
         <img src="productImg/jacket3.jpg" alt="productImg">
         <h2>ASHTASY JACKET</h2>
@@ -313,6 +319,7 @@
         <a href="#">Buy Now</a>
     </div>
 
+
     <div class="product"> 
         <img src="productImg/jacket5.jpeg" alt="productImg">
         <h2>ASHTASY JACKET</h2>
@@ -320,6 +327,7 @@
         <p class="productPrice">TK. 3000 </p>
         <a href="#">Buy Now</a>
     </div>
+    
 
     <div class="product"> 
         <img src="productImg/jacket6.jpeg" alt="productImg">
