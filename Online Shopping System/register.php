@@ -3,6 +3,16 @@
     <head>
     <title>Document</title>
     <style>
+
+    body{
+        background-color: lightgray;
+        font-family: Arial, sans-serif;
+        color: #333;
+
+    }
+
+
+
     .registerdiv{
         margin-top: 200px;
         display: flex;
@@ -18,8 +28,11 @@
         background-color: green;
         color: white;
         padding: 10px;
-       
+        margin-top: 10px;
+        
+        margin-bottom: 10px;
         text-align: center;
+        
 
        
          
@@ -37,6 +50,7 @@
     padding: 15px;
     margin: 8px;
     width: 162px;
+    
 
 }
 .button{
@@ -47,12 +61,14 @@
 }
 button:hover{
     background-color: darkorange;
+
    
     
 }
 .registerdiv a{
     color: black;
     margin-left: 5px;
+    margin-top: 10px;
 
    }
 </style>
