@@ -43,7 +43,7 @@
                 background: rgba(0, 0, 0, 0.7);
                 border-radius: 10px;
                 padding: 40px 30px;
-                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
                 width: 380px;
                 text-align: center;
                 display: flex;
@@ -91,13 +91,7 @@
                 font-size: 14px;
             }
 
-            .login p a {
-                color: #ffd752ff;
-                text-decoration: none;
-                font-weight: bold;
-                transition: color 0.3s ease;
-            }
-
+      
       
 
         </style>
