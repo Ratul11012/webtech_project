@@ -1,124 +1,121 @@
-
-
 <!DOCTYPE html>
-<html>  
+<html>
     <head>
-    <title>ASHTASY</title>
-<style>
-   .login{
-display: flex;
-justify-content: center ;
-align-items: center;
-background-color: darkgray;
-position: fixed;
-top: 35%;
-left: 40%;
-padding: 30px;
-
-
-   }
-   
-   body {
-    background-image: url('productImg/background image.jpeg'); /* Use the image name here */
-    background-size: cover; /* Make sure the image covers the entire screen */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent repeating the image */
-    color: #924848ff;
-    font-family: Arial, sans-serif;
-}
-
-
-
-  
-
-  .brandName{
-       font-size: 24px; 
-       color: #ffd752ff;
-         text-decoration: none;
-            font-family:'lucida handwriting', cursive;
-            margin-left: 20px;
-            position: fixed;
-            top: 10px;
-            left: 20px;
-            
+        <title>ASHTASY</title>
+        <style>
         
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Arial', sans-serif;
+            }
+
+            body {
+                background: linear-gradient(135deg, #0d1553a7, #ffd752ff); /* Gradient from dark blue to yellow */
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                overflow: hidden;
+            }
 
        
-         
-    }
+            .brandName {
+                font-size: 40px;
+                color: #ffd752ff;
+                text-decoration: none;
+                font-family: 'Lucida Handwriting', cursive;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                padding: 10px 20px;
+                background: rgba(0, 0, 0, 0.5);
+                border-radius: 5px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            }
 
+        
 
-   .login input{
+           
+            .login {
+                background: rgba(0, 0, 0, 0.7);
+                border-radius: 10px;
+                padding: 40px 30px;
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+                width: 380px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
 
-    display: block;
-    padding: 10px;
-    border-radius: 15px 50px ;
-    border-bottom: 2px solid darkolivegreen;
-    margin-top: 10px;
-    margin-bottom: 5px;
-
-
-   }
-
-   .login a{
-    color: darkolivegreen;
-    margin-left: 5px;
-
-   }
-
-
-   .button{
-     border: 2px solid darkolivegreen;
-    background-color: darkolivegreen;
-    width: 100%;
     
+            .login input {
+                width: 100%;
+                padding: 15px;
+                margin: 10px 0;
+                background: #333;
+                border: 2px solid #5e94b8;
+                border-radius: 25px;
+                color: #fff;
+                font-size: 16px;
+                outline: none;
+    
+            }
 
+          
+      
+            .button {
+                padding: 15px;
+                background: #5e94b8;
+                border: 2px solid #5e94b8;
+                border-radius: 25px;
+                color: #fff;
+                font-size: 18px;
+                width: 100%;
+                margin-top: 10px;
+            }
 
-   }
+            .button:hover {
+                background-color: #ffd752ff;
+                transform: scale(1.05);
+                border-color: #ffd752ff;
+            }
 
-    </style>
+     
+            .login p {
+                color: #ddd;
+                margin-top: 20px;
+                font-size: 14px;
+            }
 
+            .login p a {
+                color: #ffd752ff;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s ease;
+            }
 
+      
+
+        </style>
     </head>
-    <body> 
+    <body>
 
-    <?php
-     include "db.php" ;
-     session_start() ;
-
-   if(isset($_POST['submit'])){
    
-    $email = $_POST['email'] ;
-    $password = $_POST['password'] ;
+        <a href="index.php" class="brandName">ASHTASY</a>
 
-    $sql = "SELECT * FROM users WHERE email='$email' AND password='$password' " ;
-    $result = mysqli_query($conn, $sql) ;
-
-    if($result->num_rows){
-        $row=mysqli_fetch_assoc($result) ;
-        if($row['password']==$password);
-        $_SESSION['user_id'] = $row['id'] ;
-        $_SESSION['user_name'] = $row['name'] ;
-        $_SESSION['user_role'] = $row['role'] ;
-    }
-    else{
-        echo "Invalid email or password" ;
-
-
-    }
-
-   }
-
-?> 
-
-     <a href="index.php"  class="brandName" > ASHTASY </a> 
+  
         <div class="login">
-       <form action="login.php" method="post">
-        <input type="email" name="email" placeholder="Enter your email here!" required>
-        <input type="password" name="password" placeholder="Enter your password here!" required>
-        <input class="button" type="submit" name="submit" value="login">
-        <p> Don't Register Yet!<a href="register.php"> Sign Up</a></p>
-      </div>
-    </form> 
+            <form action="login.php" method="post">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <input type="password" name="password" placeholder="Enter your password" required>
+                <input class="button" type="submit" name="submit" value="Login">
+                <p>Don't have an account? <a href="register.php">Sign Up</a></p>
+            </form>
+        </div>
+
     </body>
-    </html>
+</html>
