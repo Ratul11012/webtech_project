@@ -56,6 +56,12 @@ else{
             background-color: black;
         }
 
+
+        .dashboard_main{
+            margin-left: 200px;
+            padding: 30px;
+        }
+
         </style>
     </head>
 
@@ -69,7 +75,9 @@ else{
        </ul>
        </div>
        
-       <di>
+       <div class="dashboard_main">
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores enim ab ut in esse qui iure ea, recusandae rerum commodi quo corrupti quos itaque beatae possimus! Deserunt voluptates modi sint. </p>
+       </div>
 
 
     </body>
