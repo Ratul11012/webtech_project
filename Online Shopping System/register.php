@@ -1,3 +1,33 @@
+<?php
+include "db.php" ;
+if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
+    $role= "user";
+
+    $sql ="insert into users(name,email,password,
+    phone,address,role) 
+    values('$name','$email','$password',
+    '$phone','$address','$role')";
+    $result = mysqli_query($conn,$sql);
+    if(!$result){
+        echo "Error!:{ $conn->error}";
+   
+     }
+  else{
+    echo"Registered Successfully";
+  }
+
+
+
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html>  
     <head>
@@ -74,36 +104,12 @@ button:hover{
     </head>
     <body>
 
-<?php
-include "db.php" ;
-if(isset($_POST['submit'])){
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $phone = $_POST['phone'];
-    $address = $_POST['address'];
-    $role= "user";
-
-    $sql ="insert into users(name,email,password,
-    phone,address,role) 
-    values('$name','$email','$password',
-    '$phone','$address','$role')";
-    $result = mysqli_query($conn,$sql);
-    if(!$result){
-        echo "Error!:{ $conn->error}";
-   
-     }
-  else{
-    echo"Registered Successfully";
-  }
 
 
 
-}
-?>
 
-    <a href="index.php"  class="brandName" > ASHTASY </a>    
-    
+
+<a href="index.php"  class="brandName" > ASHTASY </a>    
 
 
 <div class="registerdiv">

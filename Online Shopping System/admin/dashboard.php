@@ -23,10 +23,30 @@ else{
 <html>
     <head>
         <title>ASHTASY BD</title>
+
+        <style> 
+
+        .dashboard_sidebar{
+            postion: fixed;
+            top:0;
+            background-color: #505050ff;
+            width: 250px;
+            height: 100%;
+        }
+
+        </style>
     </head>
-    
+
     <body>
-       
+       <div class="dashboard_sidebar">
+
+       <ul> 
+        <li><a href="">Add Product</a> </li>
+        <li><a href="">View Orders</a> </li>
+        <li> <a href="">Logout</a> </li>
+       </ul>
+
+       </div> 
     </body>
 
 </html>
