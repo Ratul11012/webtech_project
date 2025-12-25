@@ -1,3 +1,44 @@
+<?php
+session_start();
+
+$email=$_POST['email'];
+$password=$_POST['password'];
+
+$sql= "select * from users where email='$email'";
+$result= mysqli_query($conn, $sql);
+if($result->num_rows>0){
+    $row = mysqli_fetch_assoc($result);
+    
+    if($row['password'] == $password){
+        $_SESSION['user_id'] =$row['id'];
+        $_SESSION['user_name'] =$row['name'];
+        $_SESSION['user_role'] =$row['role'];
+        if($_SESSION['user_role'] == 'admin'){
+           header("Location: admin/dashboard.php");
+        }
+
+        else{
+            echo"dashboard for user";
+        }
+
+
+
+    else{
+        echo "Invalid password";
+    }
+    
+    }
+
+else{
+    echo"Plese! Register first!";
+}
+
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
     <head>

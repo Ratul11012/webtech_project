@@ -2,8 +2,14 @@
 
 session_start();
 if(isset($_SESSION['user_id'])){
-
-    if
+    
+    if($_SESSION['user_role'] =='admin'){
+ 
+    }
+    else{
+        echo"go to user dashboard";
+    }
+    
 }
 
 else{
@@ -11,3 +17,5 @@ else{
     exit();
 }
 ?>
+
+
