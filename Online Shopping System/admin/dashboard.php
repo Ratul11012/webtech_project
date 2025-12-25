@@ -64,7 +64,7 @@ if (isset($_SESSION['user_id'])) {
             <ul> 
                 <li><a href="">Add Product</a> </li>
                 <li><a href="">View Orders</a> </li>
-                <li><a href="logout.php">Logout</a> </li> 
+                <li><a href="../logout.php">Logout</a> </li> 
             </ul>
         </div>
        
