@@ -7,9 +7,6 @@ if(isset($_POST['submit'])){
 $email=$_POST['email'];
 $password=$_POST['password'];
 
-$sql="select * from users";
-}
-
 
 $sql= "select * from users where email='$email'";
 $result= mysqli_query($conn, $sql);
@@ -38,6 +35,8 @@ if($result->num_rows>0){
 
 else{
     echo"Plese! Register first!";
+}
+
 }
 
 }
