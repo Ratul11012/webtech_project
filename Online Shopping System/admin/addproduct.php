@@ -5,12 +5,26 @@ if (isset($_SESSION['user_id'])) {
 
  
     if ($_SESSION['user_role'] == 'admin') {
+
+        if(isset($_POST['submit'])){
+            $name=$_POST['name'];
+            $description=$_POST['description'];
+            $price=$_POST['price'];
+            $stock=$_POST['stock'];
+            $image=$_FILES['image']['name'];
+            $temp_location=$_FILES['image']['tmp_name'];
+            $category_id=$_POST['category_id'];
+            $category_name=$_POST['category_name'];
+            
+        }
    
-    } else {
+    }
+    else{
         echo "Go to user dashboard";
     }
 
-} else {
+}
+else{
 
     header("Location: ../index.php");
     exit();
