@@ -21,7 +21,9 @@ if (isset($_SESSION['user_id'])) {
 <html>
     <head>
         <title>ASHTASY BD</title>
+
         <style> 
+        
             * {
                 margin: 0;
                 padding: 0;
@@ -55,8 +57,13 @@ if (isset($_SESSION['user_id'])) {
                 margin-left: 200px;
                 padding: 30px;
             }
+
+
         </style>
+
     </head>
+
+    
 
     <body>
 

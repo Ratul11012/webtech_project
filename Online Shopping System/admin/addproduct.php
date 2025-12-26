@@ -55,9 +55,12 @@ if (isset($_SESSION['user_id'])) {
                 margin-left: 200px;
                 padding: 30px;
             }
+
         </style>
+
     </head>
 
+    
     <body>
 
         <div class="dashboard_sidebar">
@@ -68,7 +71,7 @@ if (isset($_SESSION['user_id'])) {
             </ul>
         </div>
        
-        
+
         <div class="dashboard_main">
      
                 <form action="addproduct.php" method="post" enctype="/multipart/form-data"> 
