@@ -1,11 +1,12 @@
 <?php
 session_start();  
 
-include 'db.php';
+include '../db.php';
 
 if (isset($_SESSION['user_id'])) {
 
-    
+    $Sql1="select * from categories";
+    $result1=mysqli_query($conn,$Sql1);
 
  
     if ($_SESSION['user_role'] == 'admin') {
@@ -149,24 +150,33 @@ else{
      
                 <form action="addproduct.php" method="post" enctype="/multipart/form-data"> 
 
-                <input type="text" name="name" placeholder="Enter product name">
+                <input type="text" name="name" placeholder="Enter product name" required>
                 
-                <textarea name="description" placeholder="Enter product description"></textarea>
+                <textarea name="description" placeholder="Enter product description" required></textarea>
 
-                <input type="number" name="price" placeholder="Enter product price here!">
-
-                <input type="number" name="stock" placeholder="Enter stock number">
+                <input type="number" name="price" placeholder="Enter product price here!" required>
+                <input type="number" name="stock" placeholder="Enter stock number" required>
 
                 <h2> Select Product Image: </h2>
-                <input type="file" name="image">
+                <input type="file" name="image" required>
 
-                <select name=""> 
-                    <option value="category_id"> category_id</option>
+                <?php
+                
+                while ($row=mysqli_fetch_assoc($result1)) {
+
+                ?>
+
+                <select name="category_id"> 
+                    <option value=" <?php echo $row['id']; ?>">  <?php echo $row['id']; ?>  </option>
                 </select>
                 
-               <select name=""> 
-                    <option value="category_name"> category_name</option>
+               <select name="category_name"> 
+                    <option value=" <?php echo $row['name']; ?>">  <?php echo $row['name']; ?>  </option>
                 </select>
+
+               <?php 
+               }
+                ?>
 
                 <input type="submit" class="button" name="submit" value="add product">
                  
