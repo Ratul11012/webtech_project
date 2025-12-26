@@ -57,7 +57,7 @@ if (isset($_SESSION['user_id'])) {
                 position:relative;
                 padding: 30px;
                 left: 45%;
-                margin-top: 70px;
+                margin-top: 10px;
             }
 
             .dashboard_main input{
@@ -71,7 +71,7 @@ if (isset($_SESSION['user_id'])) {
 
             .dashboard_main select{
                 display:inline-block;  /* each input FIELD on a new line, so br use kora lagenai. */
-                margin: 10px;
+                margin: 15px;
                 padding: 20px;
                 border-left: 2px solid lightcoral;
                 border-right: 2px solid lightcoral;
@@ -89,7 +89,7 @@ if (isset($_SESSION['user_id'])) {
             }
 
             .button {
-                width:25%;
+                width:20%;
                 background-color: darkcyan;
                 border-radius: 15px 50px;
             }
