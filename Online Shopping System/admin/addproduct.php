@@ -19,11 +19,10 @@ if (isset($_SESSION['user_id'])) {
             $image=$_FILES['image']['name'];
             $temp_location=$_FILES['image']['tmp_name'];
             $upload_location= "../image/";
-            $category_id=$_POST['category_id'];
             $category_name=$_POST['category_name'];
             
-            $sql="insert into products (name,description,price,stock,image,category_id,category_name)
-            values('$name' , '$description' , '$price' , '$stock' , '$image' , '$category_id' , '$category_name')";
+            $sql="insert into products (name,description,price,stock,image,category_name)
+            values('$name' , '$description' , '$price' , '$stock' , '$image' , '$category_name')";
 
             $result = mysqli_query($conn, $sql);
             if(!$result){
@@ -161,14 +160,8 @@ else{
                 <input type="file" name="image" required>
 
                 <?php
-                
                 while ($row=mysqli_fetch_assoc($result1)) {
-
                 ?>
-
-                <select name="category_id"> 
-                    <option value=" <?php echo $row['id']; ?>">  <?php echo $row['id']; ?>  </option>
-                </select>
                 
                <select name="category_name"> 
                     <option value=" <?php echo $row['name']; ?>">  <?php echo $row['name']; ?>  </option>
