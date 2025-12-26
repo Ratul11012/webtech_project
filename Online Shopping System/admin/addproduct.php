@@ -64,6 +64,39 @@ if (isset($_SESSION['user_id'])) {
                 display:block;  /* each input FIELD on a new line, so br use kora lagenai. */
                 margin: 10px;
                 padding: 20px;
+                border-left: 2px solid lightcoral;
+                border-right: 2px solid lightcoral;
+                border-radius: 15px 50px;
+            }
+
+            .dashboard_main select{
+                display:inline-block;  /* each input FIELD on a new line, so br use kora lagenai. */
+                margin: 10px;
+                padding: 20px;
+                border-left: 2px solid lightcoral;
+                border-right: 2px solid lightcoral;
+                border-radius: 15px 50px;
+            }
+
+            .dashboard_main textarea{
+                display:block;  /* each input FIELD on a new line, so br use kora lagenai. */
+                margin: 10px;
+                padding: 20px;
+                width: 30%;
+                border-left: 2px solid lightcoral;
+                border-right: 2px solid lightcoral;
+                border-radius: 15px 50px;
+            }
+
+            .button {
+                width:25%;
+                background-color: darkcyan;
+                border-radius: 15px 50px;
+            }
+
+            .button:hover {
+                background-color: black;
+                color: white;
             }
 
         </style>
@@ -105,7 +138,7 @@ if (isset($_SESSION['user_id'])) {
                     <option value="category_name"> category_name</option>
                 </select>
 
-                <input type="submit" name="submit" value="add product">
+                <input type="submit" class="button" name="submit" value="add product">
                  
                 </form>
         </div>
