@@ -70,7 +70,25 @@ if (isset($_SESSION['user_id'])) {
        
         <div class="dashboard_main">
             <div> 
-                <form action="addproduct.php"> 
+                <form action="addproduct.php" method="post" enctype="/multipart/form-data"> 
+
+                <input type="text" name="name" placeholder="Enter product name">
+                
+                <textarea name="description" placeholder="Enter product description">    
+                </textarea>
+
+                <input type="number" name="price" placeholder="Enter product price here!">
+
+                <input type="number" name="stock" placeholder="Enter stock number">
+
+                <input type="file" name="image">
+
+                <select name=""> 
+                    <option> </option>
+ 
+
+                </select>
+                 
 
                 </form>
             </div>
