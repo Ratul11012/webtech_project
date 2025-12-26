@@ -68,8 +68,9 @@ if (isset($_SESSION['user_id'])) {
             </ul>
         </div>
        
+        
         <div class="dashboard_main">
-            <div> 
+     
                 <form action="addproduct.php" method="post" enctype="/multipart/form-data"> 
 
                 <input type="text" name="name" placeholder="Enter product name">
@@ -84,14 +85,16 @@ if (isset($_SESSION['user_id'])) {
                 <input type="file" name="image">
 
                 <select name=""> 
-                    <option> </option>
- 
-
+                    <option value="category_id"> category_id</option>
                 </select>
-                 
+                
+               <select name=""> 
+                    <option value="category_name"> category_name</option>
+                </select>
 
+                <input type="submit" name="submit" value="add product">
+                 
                 </form>
-            </div>
         </div>
 
     </body>
