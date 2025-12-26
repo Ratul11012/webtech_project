@@ -148,7 +148,7 @@ else{
 
         <div class="dashboard_main">
      
-                <form action="addproduct.php" method="post" enctype="/multipart/form-data"> 
+                <form action="addproduct.php" method="post" enctype="multipart/form-data">
 
                 <input type="text" name="name" placeholder="Enter product name" required>
                 
