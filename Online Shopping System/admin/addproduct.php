@@ -1,7 +1,11 @@
 <?php
 session_start();  
 
+include 'db.php';
+
 if (isset($_SESSION['user_id'])) {
+
+    
 
  
     if ($_SESSION['user_role'] == 'admin') {
@@ -13,9 +17,21 @@ if (isset($_SESSION['user_id'])) {
             $stock=$_POST['stock'];
             $image=$_FILES['image']['name'];
             $temp_location=$_FILES['image']['tmp_name'];
+            $upload_location= "../image/";
             $category_id=$_POST['category_id'];
             $category_name=$_POST['category_name'];
             
+            $sql="insert into products (name,description,price,stock,image,category_id,category_name)
+            values('$name' , '$description' , '$price' , '$stock' , '$image' , '$category_id' , '$category_name')";
+
+            $result = mysqli_query($conn, $sql);
+            if(!$result){
+                echo"ERROR! : {$conn->error}";
+            }
+            else{
+                echo "Product added successfully!";
+                move_uploaded_file($temp_location, $upload_location.$image);
+            }
         }
    
     }
