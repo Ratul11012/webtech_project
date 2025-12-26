@@ -17,6 +17,7 @@ if (isset($_SESSION['user_id'])) {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,6 +26,7 @@ if (isset($_SESSION['user_id'])) {
             * {
                 margin: 0;
                 padding: 0;
+                overflow-x: hidden;
             }
 
             .dashboard_sidebar {
@@ -52,15 +54,23 @@ if (isset($_SESSION['user_id'])) {
             }
 
             .dashboard_main {
-                margin-left: 200px;
+                position:relative;
                 padding: 30px;
+                left: 45%;
+                margin-top: 70px;
+            }
+
+            .dashboard_main input{
+                display:block;  /* each input FIELD on a new line, so br use kora lagenai. */
+                margin: 10px;
+                padding: 20px;
             }
 
         </style>
 
     </head>
 
-    
+
     <body>
 
         <div class="dashboard_sidebar">
@@ -78,13 +88,13 @@ if (isset($_SESSION['user_id'])) {
 
                 <input type="text" name="name" placeholder="Enter product name">
                 
-                <textarea name="description" placeholder="Enter product description">    
-                </textarea>
+                <textarea name="description" placeholder="Enter product description"></textarea>
 
                 <input type="number" name="price" placeholder="Enter product price here!">
 
                 <input type="number" name="stock" placeholder="Enter stock number">
 
+                <h2> Select Product Image: </h2>
                 <input type="file" name="image">
 
                 <select name=""> 
