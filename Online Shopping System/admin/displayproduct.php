@@ -48,6 +48,20 @@ else{
 
     <body>
 
+
+    <div class="dashboard_sidebar">
+            <ul> 
+                <li><a href="addproduct.php">Add Product</a> </li>
+                <li><a href="displayproduct.php">View Orders</a> </li>
+                <li><a href="../logout.php">Logout</a> </li> 
+            </ul>
+        </div>
+       
+        <div class="dashboard_main">
+            <p>Welcome to the Admin Dashboard!</p>  
+        </div>
+
+
     <table>
         <thead>
             <tr>
@@ -69,12 +83,12 @@ else{
             
             ?>
             <tr>
-                <td><?php echo  </td>
-                <td>pd </td>
-                <td>24 </td>
-                <td>12 </td>
-                <td> img </td>
-                <td> catgn </td>
+                <td><?php echo $row['name'] ?></td>
+                <td><?php echo $row['description'] ?>  </td>
+                <td><?php echo $row['price'] ?>  </td>
+                <td><?php echo $row['stock'] ?>  </td>
+                <td> <img src="../image/<?php echo $row['image'] ?> "  alt=""> </td>
+                <td> <?php echo $row['category_name'] ?> </td>
                 <td> <a class="update" href="#"> Update</a></td>
                 <td> <a class="delete" href="#"> Delete</a></td>
             </tr>
