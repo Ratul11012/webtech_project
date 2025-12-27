@@ -154,7 +154,7 @@ else{
                 <td><?php echo $row['description'] ?>  </td>
                 <td><?php echo $row['price'] ?>  </td>
                 <td><?php echo $row['stock'] ?>  </td>
-                <td> <img src="../image/<?php echo $row['image'] ?> "  alt=""> </td>
+                <td> <img src="../image/<?php echo htmlspecialchars($row['image']); ?>" alt="Product Image" width="200" height="200"> </td>
                 <td> <?php echo $row['category_name'] ?> </td>
                 <td> <a class="update" href="#"> Update</a></td>
                 <td> <a class="delete" href="#"> Delete</a></td>
