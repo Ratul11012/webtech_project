@@ -79,6 +79,37 @@ else{
                 padding: 30px;
             }
 
+            table{
+                width:100%;
+                border:none;
+            }
+
+            th{
+                border-top:4px solid darkblue;
+            }
+
+            tr,th,td{
+                padding:10px;
+                text-align:center;
+                border-bottom:2px solid blue;
+            }
+
+            td{
+                background-color:lightblue;
+            }
+
+            .update{
+                background-color:lightgreen;
+                text-decoration:none;
+                padding:10px;
+            }
+
+            .delete{
+                background-color:lightcoral;
+                text-decoration:none;
+                padding:10px;
+            }
+
         </style>
     </head>
 
