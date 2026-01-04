@@ -2,11 +2,12 @@
 session_start();  
 if (isset($_SESSION['user_id'])) {
 
-     if ($_SESSION['user_role'] == 'user ') {
+     if ($_SESSION['user_role'] == 'user') {
         
    
     } else {
-        header("Location: admin/dashboard.php");
+        /*header("Location: admin/dashboard.php");*/
+        echo "Go to admin dashboard";
     }
 
 } else {
@@ -19,6 +20,8 @@ if (isset($_SESSION['user_id'])) {
 <!DOCTYPE html>
 <html>
     <head>
+        <title>ASHTASY BD</title>
+
         <title>ASHTASY BD</title>
 
         <style> 
@@ -75,7 +78,7 @@ if (isset($_SESSION['user_id'])) {
         </div>
        
         <div class="dashboard_main">
-            <p>Welcome to the Admin Dashboard!</p>  
+            <p>Welcome to the User Dashboard!</p>  
         </div>
 
     </body>
