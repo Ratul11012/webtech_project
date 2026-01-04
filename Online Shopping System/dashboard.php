@@ -23,8 +23,6 @@ if (isset($_SESSION['user_id'])) {
     <head>
         <title>ASHTASY BD</title>
 
-        <title>ASHTASY BD</title>
-
         <style> 
         
             * {

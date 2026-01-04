@@ -22,7 +22,7 @@ if($result->num_rows > 0){
         if($_SESSION['user_role'] == 'admin'){
             header("Location: admin/dashboard.php");
         } else {
-            echo "dashboard for user";
+            header("Location: dashboard.php");
         }
 
     } else { 
