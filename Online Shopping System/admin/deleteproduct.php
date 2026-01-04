@@ -9,11 +9,12 @@ if(isset($_SESSION['user_id'])) {
             $product_id = $_GET['product_id'];
             $sql="delete from products where id = '$product_id'";
             $result=mysqli_query($conn,$sql);
+
             if(!$result){
                 echo"ERROR! : {$conn->error}";
             }
             else {
-                echo "Product deleted successfully.";
+                echo "Product deleted successfully.<a href='displayproduct.php'> Go back</a>";
             }
             
 
@@ -40,7 +41,7 @@ else {
         <title>ASHTASY BD</title>
 
         <style>
-
+            
         </style>
     </head>
 
