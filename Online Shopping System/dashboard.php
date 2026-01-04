@@ -72,7 +72,7 @@ if (isset($_SESSION['user_id'])) {
 
         <div class="dashboard_sidebar">
             <ul> 
-                <li><a href="addproduct.php">View Orders</a> </li>
+                <li><a href="viewproduct.php">View Orders</a> </li>
                  
                 <li><a href=" logout.php">Logout</a> </li> 
             </ul>
