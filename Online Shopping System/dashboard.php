@@ -1,10 +1,11 @@
 <?php
 session_start();  
+
 if (isset($_SESSION['user_id'])) {
 
-     if ($_SESSION['user_role'] == 'user') {
-        
-   
+     if ($_SESSION['user_role'] == 'admin') {
+        header("Location: admin/dashboard.php");
+        exit();
     } else {
         /*header("Location: admin/dashboard.php");*/
         echo "Go to admin dashboard";
@@ -73,7 +74,7 @@ if (isset($_SESSION['user_id'])) {
             <ul> 
                 <li><a href="addproduct.php">Add Product</a> </li>
                 <li><a href="displayproduct.php">View Orders</a> </li>
-                <li><a href=" logout.php">Logout</a> </li> 
+                <li><a href="../logout.php">Logout</a> </li> 
             </ul>
         </div>
        
