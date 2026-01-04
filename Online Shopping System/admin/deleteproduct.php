@@ -7,9 +7,16 @@ if(isset($_SESSION['user_id'])) {
 
         if(isset($_GET['product_id'])) {
             $product_id = $_GET['product_id'];
-            $sql="delete from products where product_id = '$product_id'";
+            $sql="delete from products where id = '$product_id'";
             $result=mysqli_query($conn,$sql);
+            if(!$result){
+                echo"ERROR! : {$conn->error}";
+            }
+            else {
+                echo "Product deleted successfully.";
+            }
             
+
 
         }
 
