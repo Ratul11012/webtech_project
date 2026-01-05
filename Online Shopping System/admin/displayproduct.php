@@ -43,7 +43,7 @@ else{
 
         <style>
 
-            <style> 
+          
         
             * {
                 margin: 0;
