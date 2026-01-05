@@ -122,7 +122,7 @@ else{
         </div>
        
         <div class="dashboard_main">
-            <p>Welcome to the Admin Dashboard!</p>  
+            <p>Welcome to the user Dashboard!</p>  
         </div>
 
 
