@@ -115,10 +115,9 @@ else{
 
     <div class="dashboard_sidebar">
             <ul> 
-                
+                 <li><a href="index.php">Shop</a> </li>
                 <li><a href="myorders.php">My Order</a> </li>
-                 
-               
+                               
                 <li><a href="logout.php">Logout</a> </li> 
             </ul>
         </div>
