@@ -11,7 +11,7 @@ if (isset($_SESSION['user_id'])) {
     if(isset($_GET['product_id'])){
         $product_id=$_GET['product_id'];
         $result2=mysqli_query($conn, $sql2);
-        $row=mysqli_fetch_assoc($result2);
+        $row2=mysqli_fetch_assoc($result2);
     }
 
     $sql2="select * from products where id='$product_id' ";
@@ -22,15 +22,15 @@ if (isset($_SESSION['user_id'])) {
             $description=$_POST['description'];
             $price=$_POST['price'];
             $stock=$_POST['stock'];
+            
+            $sql3="update products set name='$name', description='$description', price='$price', stock='$stock' where id='$product_id' ";
+
             $image=$_FILES['image']['name'];
             $temp_location=$_FILES['image']['tmp_name'];
             $upload_location= "../image/";
             $category_name=$_POST['category_name'];
             
-            $sql="insert into products (name,description,price,stock,image,category_name)
-            values('$name' , '$description' , '$price' , '$stock' , '$image' , '$category_name')";
 
-            $result = mysqli_query($conn, $sql);
             if(!$result){
                 echo"ERROR! : {$conn->error}";
             }
@@ -153,19 +153,19 @@ else{
 
         <div class="dashboard_main">
      
-                <form action="updateproduct.php" method="post" enctype="multipart/form-data">
+                <form action="updateproduct.php ?product_id=<?php echo $product_id; ?>" method="post" enctype="multipart/form-data">
 
-                <input type="text" name="name" value="">
+                <input type="text" name="name" value="<?php echo $row2['name']; ?>">
                 
-                <textarea name="description" value=""></textarea>
+                <textarea name="description" value="<?php echo $row2['description']; ?>"></textarea>
 
-                <input type="number" name="price" value="">
-                <input type="number" name="stock" value="">
+                <input type="number" name="price" value="<?php echo $row2['price']; ?>">
+                <input type="number" name="stock" value="<?php echo $row2['stock']; ?>">
                 
-                <img src="" alt="">
+                <img src="../image/<?php echo $row2['image']; ?>" alt="">
                 <input type="file" name="image">
 
-                <h1> Category Name Is: </h1>
+                <h1> Category Name Is: <?php echo $row2['category_name']; ?></h1>
                  <select name="category_name">
                 <?php
                 while ($row=mysqli_fetch_assoc($result1))
