@@ -10,6 +10,7 @@ if (isset($_SESSION['user_id'])) {
 
     if(isset($_GET['product_id'])){
         $product_id=$_GET['product_id'];
+        $sql2="select * from products where id='$product_id' ";
         $result2=mysqli_query($conn, $sql2);
         $row2=mysqli_fetch_assoc($result2);
     }
@@ -53,16 +54,11 @@ if (isset($_SESSION['user_id'])) {
             }
 
              $category_name=$_POST['category_name'];
-             if($image){
-            $temp_location=$_FILES['image']['tmp_name'];
-            $upload_location= "../image/";
-
-            $sql4="update products set name='$name', description='$description', price='$price', stock='$stock', image='$image' where id='$product_id' ";
-            $result4=mysqli_query($conn, $sql4);
-            if($result4){
-                
-                echo "Product added successfully!";
-                move_uploaded_file($temp_location, $upload_location.$image);
+             if($category_name){
+  
+            $sql5="update products set name='$name', description='$description', price='$price', stock='$stock', category='$category_name' where id='$product_id' ";
+            $result5=mysqli_query($conn, $sql5);
+            if($result5){
                 header("Location: displayproduct.php");
             }
             else{
