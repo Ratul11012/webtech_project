@@ -182,10 +182,19 @@
     
     <nav> 
     <ul>
-
+        <?php 
+        if(!isset($_SESSION['user_id'])){
+        ?>
+        
         <li> <a href="login.php">LOGIN </a> </li>
         <li> <a href="register.php">SIGNUP </a> </li>
-        <li> <a href="">DASHBOARD </a> </li>
+        <?php } ?>
+
+        <?php 
+        if(isset($_SESSION['user_id'])){
+        ?>
+        <li> <a href="dashboard.php">DASHBOARD </a> </li>
+        <?php } ?>        
      
     </ul>
     </nav>
