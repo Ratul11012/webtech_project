@@ -8,7 +8,13 @@ if (isset($_SESSION['user_id'])) {
     $Sql1="select * from categories";
     $result1=mysqli_query($conn,$Sql1);
 
- 
+    if(isset($_GET['product_id'])){
+        $product_id=$_GET['product_id'];
+        $result2=mysqli_query($conn, $sql2);
+        $row=mysqli_fetch_assoc($result2);
+    }
+
+    $sql2="select * from products where id='$product_id' ";
     if ($_SESSION['user_role'] == 'admin') {
 
         if(isset($_POST['submit'])){
