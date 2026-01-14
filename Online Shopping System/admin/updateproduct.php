@@ -18,18 +18,32 @@ if (isset($_SESSION['user_id'])) {
     if ($_SESSION['user_role'] == 'admin') {
 
         if(isset($_POST['submit'])){
+            $product_id=$_GET['product_id'];
             $name=$_POST['name'];
             $description=$_POST['description'];
             $price=$_POST['price'];
             $stock=$_POST['stock'];
             
             $sql3="update products set name='$name', description='$description', price='$price', stock='$stock' where id='$product_id' ";
+            $result3=mysqli_query($conn, $sql3);
+            if($result3){
+                header("Location: displayproduct.php");
+            }
+            else{
+                echo"ERROR! : {$conn->error}";
+            }
 
             $image=$_FILES['image']['name'];
+            if($image=){
+    
             $temp_location=$_FILES['image']['tmp_name'];
             $upload_location= "../image/";
-            $category_name=$_POST['category_name'];
             
+           
+            
+            }
+
+             $category_name=$_POST['category_name'];
 
             if(!$result){
                 echo"ERROR! : {$conn->error}";
