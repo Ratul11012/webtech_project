@@ -1,3 +1,12 @@
+<?php 
+session_start();
+include "db.php";
+$sql = "select * from products";
+$result = mysqli_query($conn, $sql);
+
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
