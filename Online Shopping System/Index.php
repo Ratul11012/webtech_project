@@ -1,6 +1,8 @@
 <?php 
 session_start();
 include "db.php";
+$sql_category = "select * from categories";
+$result_category = mysqli_query($conn, $sql_category);
 $sql = "select * from products";
 $result = mysqli_query($conn, $sql);
 
@@ -189,6 +191,14 @@ $result = mysqli_query($conn, $sql);
     <a href="index.php">SHOP</a>
     <a href="index.php"  class="brandName" style="font-size: 24px; color: #ffd752ff;"> ASHTASY </a>       
     
+    <ul>
+        <?php 
+        while($row_category = mysqli_fetch_assoc($result_category)){
+            <li> <a href="index.php?category_name= <?php echo $row_category['name']; ?>"> <?php echo $row_category['name']; ?> </a> </li>
+        <?php } ?>
+
+    </ul>
+
     <nav> 
     <ul>
         <?php 
