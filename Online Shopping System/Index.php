@@ -244,6 +244,8 @@ $result_category = mysqli_query($conn, $sql_category);
     <?php 
         }
     ?>
+
+    
 <!--
    
     <div class="product"> 
