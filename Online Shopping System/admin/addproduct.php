@@ -159,17 +159,16 @@ else{
                 <h2> Select Product Image: </h2>
                 <input type="file" name="image" required>
 
+                <h2>Select Product Category:</h2>
+                <select name="category_name" required>
                 <?php
-                while ($row=mysqli_fetch_assoc($result1)) {
+                   while ($row = mysqli_fetch_assoc($result1)) {
                 ?>
-                
-               <select name="category_name"> 
-                    <option value=" <?php echo $row['name']; ?>">  <?php echo $row['name']; ?>  </option>
+                    <option value="<?php echo $row['name']; ?>"><?php echo $row['name']; ?></option>
+                <?php
+                   }
+                ?>
                 </select>
-
-               <?php 
-               }
-                ?>
 
                 <input type="submit" class="button" name="submit" value="add product">
                  
