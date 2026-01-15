@@ -192,18 +192,13 @@ $result = mysqli_query($conn, $sql);
     <nav> 
     <ul>
         <?php 
-        if(!isset($_SESSION['user_id'])){
-        ?>
-        
+        if(!isset($_SESSION['user_id'])){ ?> 
         <li> <a href="login.php">LOGIN </a> </li>
         <li> <a href="register.php">SIGNUP </a> </li>
         <?php } ?>
-
-        <?php 
-        if(isset($_SESSION['user_id'])){
-        ?>
-        <li> <a href="dashboard.php">DASHBOARD </a> </li>
-        <?php } ?>        
+    
+        <li> <a href="admin/dashboard.php">DASHBOARD </a> </li>
+             
      
     </ul>
     </nav>
@@ -212,6 +207,19 @@ $result = mysqli_query($conn, $sql);
 
     <main class="main"> 
 
+    <?php
+    while($row = mysqli_fetch_assoc($result)){
+    ?>
+        <div class="product"> 
+            <img src="image/<?php echo $row['image']; ?>" alt="productImg">
+            <h2><?php echo $row['name']; ?></h2>
+            <p><?php echo $row['description']; ?></p>
+            <p><?php echo $row['stock']; ?></p>
+            <p class="productPrice">TK. <?php echo $row['price']; ?> </p>
+            <a href="#">Buy Now</a>
+        </div>
+    <?php } ?>
+   
     <div class="product"> 
         <img src="productImg/hoodie1.jpg" alt="productImg">
         <h2>ASHTASY HOODIE</h2>
