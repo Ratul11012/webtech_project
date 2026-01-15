@@ -1,10 +1,19 @@
 <?php 
 session_start();
 include "db.php";
+
+if(isset($_GET['category_name'])){
+    $category_name=$_GET['category_name'];
+    $sql_product_category="select * from products where category_name= '$category_name' ";
+    $result_product_category=mysqli_query($conn, $sql_product_category);
+}
+else{
+    $sql_product_category = "select * from products";
+    $result_product_category = mysqli_query($conn, $sql_product_category);
+}
+
 $sql_category = "select * from categories";
 $result_category = mysqli_query($conn, $sql_category);
-$sql = "select * from products";
-$result = mysqli_query($conn, $sql);
 
 ?>
 
@@ -218,20 +227,24 @@ $result = mysqli_query($conn, $sql);
     </header>
 
 
+
     <main class="main"> 
 
-    <?php
-    while($row = mysqli_fetch_assoc($result)){
+    <?php 
+    while ($row_product_category = mysqli_fetch_assoc($result_product_category)) {
     ?>
         <div class="product"> 
-            <img src="image/<?php echo $row['image']; ?>" alt="productImg">
-            <h2><?php echo $row['name']; ?></h2>
-            <p><?php echo $row['description']; ?></p>
-            <p><?php echo $row['stock']; ?></p>
-            <p class="productPrice">TK. <?php echo $row['price']; ?> </p>
+            <img src="image/<?php echo $row_product_category['image']; ?>" alt="productImg">
+            <h2><?php echo $row_product_category['name']; ?></h2>
+            <p><?php echo $row_product_category['description']; ?></p>
+            <p><?php echo $row_product_category['stock']; ?></p>
+            <p class="productPrice">TK. <?php echo $row_product_category['price']; ?> </p>
             <a href="#">Buy Now</a>
         </div>
-    <?php } ?>
+    <?php 
+        }
+    ?>
+<!--
    
     <div class="product"> 
         <img src="productImg/hoodie1.jpg" alt="productImg">
@@ -366,7 +379,7 @@ $result = mysqli_query($conn, $sql);
         <p class="productPrice">TK. 3856 </p>
         <a href="#">Buy Now</a>
     </div>
-
+-->
 
     </main>
 
