@@ -2,19 +2,22 @@
 session_start();
 include "db.php";
 
-if(isset($_GET['category_name'])){
-    $category_name=$_GET['category_name'];
-    $sql_product_category="select * from products where category_name= '$category_name' ";
-    $result_product_category=mysqli_query($conn, $sql_product_category);
-}
-else{
-    $sql_product_category = "select * from products";
-    $result_product_category = mysqli_query($conn, $sql_product_category);
+
+if (isset($_GET['category_name']) && $_GET['category_name'] != '') {
+    $category_name = mysqli_real_escape_string($conn, $_GET['category_name']);
+    $sql_product_category = "SELECT * FROM products WHERE category_name='$category_name'";
+} else {
+
+    $sql_product_category = "SELECT * FROM products";
 }
 
-$sql_category = "select * from categories";
+$result_product_category = mysqli_query($conn, $sql_product_category);
+if (!$result_product_category) {
+    die("Product Query Failed: " . mysqli_error($conn));
+}
+
+$sql_category = "SELECT * FROM categories";
 $result_category = mysqli_query($conn, $sql_category);
-
 ?>
 
 
