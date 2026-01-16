@@ -199,7 +199,8 @@ else{
                 <input type="number" name="price" value="<?php echo $row2['price']; ?>">
                 <input type="number" name="stock" value="<?php echo $row2['stock']; ?>">
                 
-                <img src="../image/<?php echo $row2['image']; ?>" alt="">
+                <img src="../image/<?php echo $row2['image']; ?>" alt="" style="max-width: 200px; max-height: 200px; object-fit: cover;">
+
                 <input type="file" name="image">
 
                 <h1> Category Name Is: <?php echo $row2['category_name']; ?></h1>
