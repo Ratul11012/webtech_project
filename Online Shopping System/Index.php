@@ -291,7 +291,9 @@ $result_category = mysqli_query($conn, $sql_category);
             <?php
             if(isset($_SESSION['user_id'])){
             ?>  
-               <a href="singleorder.php">Buy Now</a>
+              <a href="singleorder.php?user_id=<?php echo $_SESSION['user_id']; ?>&product_id=<?php echo $row_product_category['id']; ?>">Buy Now</a>
+
+
             <?php } ?> 
              
             <?php
@@ -300,6 +302,9 @@ $result_category = mysqli_query($conn, $sql_category);
                <a href="login.php">Buy Now</a>   
             <?php } ?>
         </div>
+    <?php 
+        }
+    ?>
      
         
     
