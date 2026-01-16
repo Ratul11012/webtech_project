@@ -292,10 +292,7 @@ $result_category = mysqli_query($conn, $sql_category);
             <?php
             if(isset($_SESSION['user_id'])){
             ?>  
-            
              <a href="singleorder.php?user_id=<?php echo trim($_SESSION['user_id']); ?>&product_id=<?php echo trim($row_product_category['id']); ?>&product_price=<?php echo trim($row_product_category['price']); ?>">Buy Now</a>
- 
-
             <?php } ?> 
              
             <?php
