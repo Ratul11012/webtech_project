@@ -91,44 +91,51 @@ $result_category = mysqli_query($conn, $sql_category);
             
         }
 
-      /*category name links */
+
+        /* Categories in the header */
         .category-links {
-            list-style: none; 
-            padding: 0;        
-            margin: 0;           
-            display: flex;    
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
             justify-content: flex-start;
-            margin-left: 20px; 
+            margin-left: 20px;
+            overflow-x: auto; /* Allow horizontal scrolling if needed */
+            overflow-y: hidden; /* Prevent vertical scrollbar */
+            white-space: nowrap; /* Ensure categories don't wrap */
         }
+
 
         .category-links li {
-            margin-right: 15px;  
+            margin-right: 15px; /* Spacing between categories */
         }
+
 
         .category-links a {
-            text-decoration: none;    
-            color: #fff;              
-            background-color: #0d1553; 
-            padding: 10px 20px;      
-            border-radius: 30px;    
-            font-size: 14px;        
-            font-weight: bold;       
+           text-decoration: none;
+           color: #fff;
+           background-color: #0d1553;
+           padding: 10px 20px;
+           border-radius: 30px;
+           font-size: 14px;
+           font-weight: bold;
+           display: inline-block;
         }
+
 
         .category-links a:hover {
-            background-color: #FFD700; 
-            color: #000;               
-            text-decoration: underline; 
+           background-color: #FFD700;
+           color: #000;
+           text-decoration: underline;
         }
 
-       /* Active category (if user is viewing this category) */
+        /* Active category styling (if selected) */
         .category-links a.active {
             background-color: #4CAF50;
-            color: white;            
+            color: white;
         }
-
         
-
+        
 
         /* Main Content Styling */
 
@@ -241,17 +248,16 @@ $result_category = mysqli_query($conn, $sql_category);
     
     <ul class="category-links">
     <?php 
-      while($row_category = mysqli_fetch_assoc($result_category)) {
-        // Check if this category is currently selected
-        $is_active = isset($_GET['category_name']) && $_GET['category_name'] == $row_category['name'] ? 'active' : '';
+       while ($row_category = mysqli_fetch_assoc($result_category)) {
     ?>
-        <li><a href="index.php?category_name=<?php echo $row_category['name']; ?>" class="<?php echo $is_active; ?>">
+        <li><a href="index.php?category_name=<?php echo $row_category['name']; ?>">
         <?php echo $row_category['name']; ?>
         </a></li>
     <?php 
         } 
     ?>
     </ul>
+
 
 
     <nav> 
