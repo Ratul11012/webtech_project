@@ -5,10 +5,10 @@ include "db.php";
 
 if (isset($_GET['category_name']) && $_GET['category_name'] != '') {
     $category_name = mysqli_real_escape_string($conn, $_GET['category_name']);
-    $sql_product_category = "SELECT * FROM products WHERE category_name='$category_name'";
+    $sql_product_category = "SELECT * FROM products WHERE category_name='$category_name'and stock > 0";
 } else {
 
-    $sql_product_category = "SELECT * FROM products";
+    $sql_product_category = "SELECT * FROM products WHERE stock > 0";
 }
 
 $result_product_category = mysqli_query($conn, $sql_product_category);
