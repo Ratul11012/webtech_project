@@ -7,6 +7,7 @@ if (isset($_GET['category_name']) && $_GET['category_name'] != '') {
     $category_name = mysqli_real_escape_string($conn, $_GET['category_name']);
     $sql_product_category = "SELECT * FROM products WHERE category_name='$category_name'";
 } else {
+
     $sql_product_category = "SELECT * FROM products";
 }
 
@@ -77,7 +78,7 @@ $result_category = mysqli_query($conn, $sql_category);
             color: orange;
         }
 
-        /*// Brand Name Styling */
+        /* Brand Name Styling */
         .brandName{
             font-family:'lucida handwriting', cursive;
             font-weight: bold;
@@ -89,6 +90,44 @@ $result_category = mysqli_query($conn, $sql_category);
             flex-grow:1;
             
         }
+
+      /*category name links */
+        .category-links {
+            list-style: none; 
+            padding: 0;        
+            margin: 0;           
+            display: flex;    
+            justify-content: flex-start;
+            margin-left: 20px; 
+        }
+
+        .category-links li {
+            margin-right: 15px;  
+        }
+
+        .category-links a {
+            text-decoration: none;    
+            color: #fff;              
+            background-color: #0d1553; 
+            padding: 10px 20px;      
+            border-radius: 30px;    
+            font-size: 14px;        
+            font-weight: bold;       
+        }
+
+        .category-links a:hover {
+            background-color: #FFD700; 
+            color: #000;               
+            text-decoration: underline; 
+        }
+
+       /* Active category (if user is viewing this category) */
+        .category-links a.active {
+            background-color: #4CAF50;
+            color: white;            
+        }
+
+        
 
 
         /* Main Content Styling */
@@ -189,8 +228,6 @@ $result_category = mysqli_query($conn, $sql_category);
             color: black;
         }
 
-
-
         </style>
 
     </head>
@@ -202,13 +239,17 @@ $result_category = mysqli_query($conn, $sql_category);
     <a href="index.php">SHOP</a>
     <a href="index.php"  class="brandName" style="font-size: 24px; color: #ffd752ff;"> ASHTASY </a>       
     
-    <ul>
+    <ul class="category-links">
     <?php 
-    while($row_category = mysqli_fetch_assoc($result_category)) {
+      while($row_category = mysqli_fetch_assoc($result_category)) {
+        // Check if this category is currently selected
+        $is_active = isset($_GET['category_name']) && $_GET['category_name'] == $row_category['name'] ? 'active' : '';
     ?>
-        <li> <a href="index.php?category_name=<?php echo $row_category['name']; ?>"> <?php echo $row_category['name']; ?> </a> </li>
+        <li><a href="index.php?category_name=<?php echo $row_category['name']; ?>" class="<?php echo $is_active; ?>">
+        <?php echo $row_category['name']; ?>
+        </a></li>
     <?php 
-    } 
+        } 
     ?>
     </ul>
 
