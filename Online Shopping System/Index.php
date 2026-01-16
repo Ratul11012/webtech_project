@@ -288,11 +288,13 @@ $result_category = mysqli_query($conn, $sql_category);
             <p><?php echo $row_product_category['stock']; ?></p>
             <p class="productPrice">TK. <?php echo $row_product_category['price']; ?> </p>
             
+            
             <?php
             if(isset($_SESSION['user_id'])){
             ?>  
-              <a href="singleorder.php?user_id=<?php echo $_SESSION['user_id']; ?>&product_id=<?php echo $row_product_category['id']; ?>">Buy Now</a>
-
+            
+             <a href="singleorder.php?user_id=<?php echo trim($_SESSION['user_id']); ?>&product_id=<?php echo trim($row_product_category['id']); ?>&product_price=<?php echo trim($row_product_category['price']); ?>">Buy Now</a>
+ 
 
             <?php } ?> 
              
