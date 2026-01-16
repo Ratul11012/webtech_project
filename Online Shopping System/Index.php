@@ -126,7 +126,6 @@ $result_category = mysqli_query($conn, $sql_category);
         .category-links a:hover {
            background-color: #FFD700;
            color: #000;
-           text-decoration: underline;
         }
 
         /* Active category styling (if selected) */
@@ -135,7 +134,7 @@ $result_category = mysqli_query($conn, $sql_category);
             color: white;
         }
         
-        
+
 
         /* Main Content Styling */
 
@@ -288,11 +287,22 @@ $result_category = mysqli_query($conn, $sql_category);
             <p><?php echo $row_product_category['description']; ?></p>
             <p><?php echo $row_product_category['stock']; ?></p>
             <p class="productPrice">TK. <?php echo $row_product_category['price']; ?> </p>
-            <a href="#">Buy Now</a>
+            
+            <?php
+            if(isset($_SESSION['user_id'])){
+            ?>  
+               <a href="singleorder.php">Buy Now</a>
+            <?php } ?> 
+             
+            <?php
+            if(!isset($_SESSION['user_id'])){
+            ?>  
+               <a href="login.php">Buy Now</a>   
+            <?php } ?>
         </div>
-    <?php 
-        }
-    ?>
+     
+        
+    
 
     
 <!--
