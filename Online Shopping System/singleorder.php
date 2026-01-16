@@ -20,6 +20,9 @@ else{
             echo "Error:  {$conn->error}"; 
         }
         else{
+            $order_id=
+            $payment_method = "Cash on Delivery";
+            $sql_payment="insert into payments(order_id,user_id,payment_method)values('','$user_id','$payment_method')";
             echo"Order Added Successfully." . "<a href='index.php'> Continue Shopping</a>";
         }
 
