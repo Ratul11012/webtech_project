@@ -7,7 +7,6 @@ if (isset($_GET['category_name']) && $_GET['category_name'] != '') {
     $category_name = mysqli_real_escape_string($conn, $_GET['category_name']);
     $sql_product_category = "SELECT * FROM products WHERE category_name='$category_name'";
 } else {
-
     $sql_product_category = "SELECT * FROM products";
 }
 
