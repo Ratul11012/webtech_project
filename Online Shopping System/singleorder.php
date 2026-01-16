@@ -20,9 +20,22 @@ else{
             echo "Error:  {$conn->error}"; 
         }
         else{
+            $sql_update_stock="update products set stock=stock-1 where id='$product_id'";
+            $result_stock=mysqli_query($conn,$sql_update_stock);
+            
+
+               
+        
             $order_id=mysqli_insert_id($conn);
             $payment_method = "Cash on Delivery";
-            $sql_payment="insert into payments(order_id,user_id,payment_method)values('','$user_id','$payment_method')";
+            $sql_payment="insert into payments(order_id,user_id,total_amount,payment_method)values
+            ('$order_id','$user_id','$total_amount','$payment_method')";
+
+            $result_payment=mysqli_query($conn,$sql_payment);
+            if(!$result_payment){
+                echo "Error!: {$conn->error}"; 
+            }
+            else{
             echo"Order Added Successfully." . "<a href='index.php'> Continue Shopping</a>";
         }
 
@@ -36,4 +49,5 @@ else{
 
 }
 
+}
 ?>
