@@ -20,11 +20,12 @@ else{
             echo "Error:  {$conn->error}"; 
         }
         else{
-            $sql_update_stock="update products set stock=stock-1 where id='$product_id'";
+            $sql_update_stock="update products set stock= stock-1 where id='$product_id'";
             $result_stock=mysqli_query($conn,$sql_update_stock);
-            
+            if(!$result_stock){
+                echo "Error!: {$conn->error}";
 
-               
+            }
         
             $order_id=mysqli_insert_id($conn);
             $payment_method = "Cash on Delivery";
@@ -51,3 +52,4 @@ else{
 
 }
 ?>
+ 
