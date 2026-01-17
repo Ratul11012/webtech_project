@@ -11,7 +11,8 @@ else {
         $user_id = $_GET['user_id'];
         $product_id = $_GET['product_id'];
         $product_quantity = $_GET['quantity'];
-        $total_amount = $_GET['product_price'];
+        $price = $_GET['product_price'];
+        $total_amount=$product_quantity * $price;
         $sql = "insert into single_order(user_id, product_id, product_quantity, total_amount)
                 values('$user_id', '$product_id', '$product_quantity', '$total_amount')";
         $result = mysqli_query($conn, $sql);
@@ -20,7 +21,7 @@ else {
             echo "Error:  {$conn->error}"; 
         }
         else {
-            $sql_update_stock = "update products set stock = stock - 1 where id = '$product_id'";
+            $sql_update_stock = "update products set stock = stock - $product_quantity where id = '$product_id'";
             $result_stock = mysqli_query($conn, $sql_update_stock);
             if(!$result_stock){
                 echo "Error!: {$conn->error}";
