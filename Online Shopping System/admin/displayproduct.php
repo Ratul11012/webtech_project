@@ -53,8 +53,9 @@ else{
                 position: fixed;
                 top: 0;
                 background-color: darkcyan;
-                width: 200px;  
+                width: 150px;  
                 height: 100%;
+                overflow-y: auto;
             }
 
             .dashboard_sidebar ul li {
@@ -74,39 +75,48 @@ else{
             }
 
             .dashboard_main {
-                margin-left: 200px;
+                margin-left: 220px;
                 padding: 30px;
             }
 
-            table{
-                width:100%;
-                border:none;
+            table {
+                width: 80%; 
+                border-collapse: collapse;
+                margin: 20px auto; 
+                table-layout: fixed; 
             }
 
-            th{
-                border-top:4px solid darkblue;
+            th, td {
+                padding: 8px; 
+                text-align: center;
+                border-bottom: 2px solid blue;
+                word-wrap: break-word; 
+           } 
+
+            th {
+               border-top: 4px solid darkblue;
+               background-color: lightgray;
             }
 
-            tr,th,td{
-                padding:10px;
-                text-align:center;
-                border-bottom:2px solid blue;
+            td {
+              background-color: lightblue;
             }
 
-            td{
-                background-color:lightblue;
+            td img {
+              max-width: 100%;
+              height: auto;
             }
 
             .update{
                 background-color:lightgreen;
                 text-decoration:none;
-                padding:10px;
+                padding:8px;
             }
 
             .delete{
                 background-color:lightcoral;
                 text-decoration:none;
-                padding:10px;
+                padding:8px;
             }
 
         </style>
