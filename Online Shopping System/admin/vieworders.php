@@ -5,7 +5,7 @@ include '../db.php';
 
 if (isset($_SESSION['user_id'])) {
 
-    $Sql = "SELECT * FROM payments"; 
+    $Sql = "SELECT * FROM single_order"; 
     $result = mysqli_query($conn, $Sql);
 
     if ($_SESSION['user_role'] == 'admin') {
@@ -117,10 +117,11 @@ if (isset($_SESSION['user_id'])) {
     <table>
         <thead>
             <tr>
-                <th>Order id</th>
                 <th>User id</th>
+                <th>Product id</th>
+                <th>Product Quantity</th>
                 <th>Total Amount</th>
-                <th>Payment Method</th>
+            
             </tr>
         </thead>
 
@@ -130,10 +131,10 @@ if (isset($_SESSION['user_id'])) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     ?>
                     <tr>
-                        <td><?php echo $row['order_id']; ?></td>
                         <td><?php echo $row['user_id']; ?></td>
+                        <td><?php echo $row['product_id']; ?></td>
+                        <td><?php echo $row['product_quantity']; ?></td>
                         <td><?php echo $row['total_amount']; ?></td>
-                        <td><?php echo $row['payment_method']; ?></td>
                     </tr>
                     <?php
                 }

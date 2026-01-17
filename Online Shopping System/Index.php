@@ -296,7 +296,7 @@ $result_category = mysqli_query($conn, $sql_category);
              <input type="number" name="user_id" value="<?php echo ($_SESSION['user_id']); ?>" hidden>
              <input type="number" name="product_id" value="<?php echo ($row_product_category['id']); ?>" hidden>
              <input type="number" name="product_price" value="<?php echo ($row_product_category['price']); ?>" hidden>
-             <input type="number" name="quantity" min="1" max="<?php echo ($row_product_category['stock']); ?>" placeholder="Enter Quantity" required><br>
+             <input type="number" name="quantity" min="1" max="<?php echo ($row_product_category['stock']); ?>" placeholder="Quantity" required><br>
              <input type="submit" name="submit" value="Buy Now">
         </form> 
             
