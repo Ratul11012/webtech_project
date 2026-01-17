@@ -51,7 +51,7 @@ else{
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ASHTASY BD</title>
+        <title>Add Product - ASHTASY BD</title>
         <style> 
             * {
                 margin: 0;

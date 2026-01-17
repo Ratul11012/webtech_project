@@ -94,7 +94,7 @@ else{
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ASHTASY BD</title>
+        <title>Update Product - ASHTASY BD</title>
         <style> 
             * {
                 margin: 0;

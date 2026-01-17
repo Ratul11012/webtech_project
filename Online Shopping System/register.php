@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
 <!DOCTYPE html>
 <html>  
     <head>
-    <title>ASHTASY BD</title>
+    <title>Sign Up - ASHTASY BD</title>
     <style>
 
     body{

@@ -21,7 +21,7 @@ if (isset($_SESSION['user_id'])) {
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ASHTASY BD</title>
+        <title>Admin Dashboard - ASHTASY BD</title>
 
         <style> 
         

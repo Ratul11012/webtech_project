@@ -38,7 +38,7 @@ else {
 <html>
 
     <head>
-        <title>ASHTASY BD</title>
+        <title>Delete Product - ASHTASY BD</title>
 
         <style>
             

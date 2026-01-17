@@ -31,7 +31,7 @@ if (isset($_SESSION['user_id'])) {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ASHTASY BD</title>
+    <title>View Orders - ASHTASY BD</title>
     <style>
         * {
             margin: 0;
