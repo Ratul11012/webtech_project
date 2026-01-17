@@ -35,6 +35,10 @@ if (!isset($_SESSION['theme'])) {
             border-radius: 5px;
             background-color: #5e94b8;
             color: white;
+            position: fixed; 
+           /* bottom: 600px;  */
+           top: 60px;
+            right: 30px;  
         }
 
         button:hover {
