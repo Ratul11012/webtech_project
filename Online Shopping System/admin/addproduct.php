@@ -129,6 +129,13 @@ else{
                 color: white;
             }
 
+            h1 {
+                margin-bottom: 10px;
+                color: darkcyan;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 30px;
+            }
+
         </style>
 
     </head>
@@ -151,6 +158,8 @@ else{
         <div class="dashboard_main">
      
                 <form action="addproduct.php" method="post" enctype="multipart/form-data">
+
+                <h1> Enter Product Details: </h1> <br>
 
                 <input type="text" name="name" placeholder="Enter product name" required>
                 
