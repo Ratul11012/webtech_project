@@ -1,5 +1,6 @@
 <?php
-session_start();  
+session_start(); 
+include 'Include/darkmode.php'; 
 
 if (isset($_SESSION['user_id'])) {
 

@@ -1,6 +1,7 @@
 <?php
 session_start();
 include '../db.php';
+include '../Include/darkmode.php';
 
 
 if (isset($_SESSION['user_id']) && $_SESSION['user_role'] == 'admin') {
