@@ -5,8 +5,7 @@ include '../db.php';
 
 if (isset($_SESSION['user_id'])) {
 
-    // Change to query the payments table
-    $Sql = "SELECT * FROM payments";  // Now using the payments table instead of orders
+    $Sql = "SELECT * FROM payments"; 
     $result = mysqli_query($conn, $Sql);
 
     if ($_SESSION['user_role'] == 'admin') {
@@ -14,7 +13,7 @@ if (isset($_SESSION['user_id'])) {
         if (!$result) {
             echo "ERROR! : {$conn->error}";
         } else {
-            // No additional actions needed here
+
         }
 
     } else {
@@ -113,6 +112,7 @@ if (isset($_SESSION['user_id'])) {
 </div>
 
 <div class="dashboard_main">
+
 
     <table>
         <thead>

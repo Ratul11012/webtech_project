@@ -278,32 +278,43 @@ $result_category = mysqli_query($conn, $sql_category);
 
     <main class="main"> 
 
-    <?php 
+  <?php 
     while ($row_product_category = mysqli_fetch_assoc($result_product_category)) {
-    ?>
-        <div class="product"> 
-            <img src="image/<?php echo $row_product_category['image']; ?>" alt="productImg">
-            <h2><?php echo $row_product_category['name']; ?></h2>
-            <p><?php echo $row_product_category['description']; ?></p>
-            <p><?php echo $row_product_category['stock']; ?></p>
-            <p class="productPrice">TK. <?php echo $row_product_category['price']; ?> </p>
+?>
+    <div class="product"> 
+        <img src="image/<?php echo $row_product_category['image']; ?>" alt="productImg">
+        <h2><?php echo $row_product_category['name']; ?></h2>
+        <p><?php echo $row_product_category['description']; ?></p>
+        <p><?php echo $row_product_category['stock']; ?></p>
+        <p class="productPrice">TK. <?php echo $row_product_category['price']; ?> </p>
+
+        <?php
+        if (isset($_SESSION['user_id'])) {
+        ?>  
+
+        <form action="singleorder.php" method="get">
+             <input type="number" name="user_id" value="<?php echo ($_SESSION['user_id']); ?>" hidden>
+             <input type="number" name="product_id" value="<?php echo ($row_product_category['id']); ?>" hidden>
+             <input type="number" name="product_price" value="<?php echo ($row_product_category['price']); ?>" hidden>
+             <input type="number" name="quantity" min="1" max="<?php echo ($row_product_category['stock']); ?>" placeholder="Enter Quantity" required><br>
+             <input type="submit" name="submit" value="Buy Now">
+        </form> 
             
-            
-            <?php
-            if(isset($_SESSION['user_id'])){
-            ?>  
-             <a href="singleorder.php?user_id=<?php echo trim($_SESSION['user_id']); ?>&product_id=<?php echo trim($row_product_category['id']); ?>&product_price=<?php echo trim($row_product_category['price']); ?>">Buy Now</a>
-            <?php } ?> 
-             
-            <?php
-            if(!isset($_SESSION['user_id'])){
-            ?>  
-               <a href="login.php">Buy Now</a>   
-            <?php } ?>
-        </div>
-    <?php 
+        <?php
         }
-    ?>
+        else {
+        ?>  
+            <a href="login.php">Buy Now</a>   
+        <?php 
+        }
+        ?>
+    </div>
+<?php 
+    }
+?>
+
+    
+
      
         
     
