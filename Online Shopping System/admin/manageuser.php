@@ -125,6 +125,7 @@ if (isset($_SESSION['user_id']) && $_SESSION['user_role'] == 'admin') {
         <li><a href="manageuser.php">User Management</a></li>
         <li><a href="addproduct.php">Add Product</a></li>
         <li><a href="displayproduct.php">View Products</a></li>
+        <li><a href="managequantity.php">Manage Quantity</a></li> 
         <li><a href="vieworders.php">View Orders</a></li>
         <li><a href="../logout.php">Logout</a></li>
     </ul>
