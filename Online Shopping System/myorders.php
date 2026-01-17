@@ -124,9 +124,7 @@ else{
         </div>
        
         <div class="dashboard_main">
-            <p>Welcome to the user Dashboard!</p>  
-        </div>
-
+            <p>Welcome to the user Dashboard!</p> 
 
     <table>
         <thead>
@@ -156,6 +154,8 @@ else{
         </tbody>
 
     </table>
+
+    </div>
 
     </body>
 

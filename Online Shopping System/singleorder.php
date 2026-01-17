@@ -22,7 +22,7 @@ else{
         else{
             
             
-        
+
             $order_id=mysqli_insert_id($conn);
             $payment_method = "Cash on Delivery";
             $sql_payment="insert into payments(order_id,user_id,total_amount,payment_method)values
