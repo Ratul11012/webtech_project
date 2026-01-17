@@ -1,162 +1,151 @@
-
 <?php
-session_start();  
+session_start();
 
 include 'db.php';
 
 if (isset($_SESSION['user_id'])) {
 
-    if($_SESSION['user_role'] == 'user') {
-        $user_id = $_SESSION['user_id'];
+    $user_id = $_SESSION['user_id'];
 
-    $Sql="select * from payments where user_id='$user_id'";
-    $result=mysqli_query($conn,$Sql);
+    $sql = "SELECT single_order.product_id, single_order.product_quantity, single_order.total_amount, products.name as product_name, products.image as product_image, products.price as product_price 
+            FROM single_order
+            JOIN products ON single_order.product_id = products.id
+            WHERE single_order.user_id = '$user_id'"; 
 
-    if(!$result){
-        echo"ERROR! : {$conn->error}";
-    }
-    else{
-       
-    }
-    }
-    else{
-        header("Location: admin/dashboard.php");
+    $result = mysqli_query($conn, $sql);
+
+    if (!$result) {
+        echo "ERROR! : {$conn->error}";
     }
 
-}
-else{
-
+} else {
     header("Location: ../index.php");
     exit();
 }
-
 ?>
-
 
 <!DOCTYPE html>
 <html>
+<head>
+    <title>My Orders - ASHTASY BD</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-    <head>
-        <title>ASHTASY BD</title>
+        .dashboard_sidebar {
+            position: fixed;
+            top: 0;
+            background-color: darkcyan;
+            width: 200px;
+            height: 100%;
+        }
 
-        <style>
+        .dashboard_sidebar ul li {
+            list-style: none;
+            text-align: center;
+        }
 
-             
-        
-            * {
-                margin: 0;
-                padding: 0;
-            }
+        .dashboard_sidebar ul li a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }
 
-            .dashboard_sidebar {
-                position: fixed;
-                top: 0;
-                background-color: darkcyan;
-                width: 200px;  
-                height: 100%;
-            }
+        .dashboard_sidebar ul li a:hover {
+            background-color: black;
+        }
 
-            .dashboard_sidebar ul li {
-                list-style: none;
-                text-align: center;
-            }
+        .dashboard_main {
+            margin-left: 200px;
+            padding: 30px;
+        }
 
-            .dashboard_sidebar ul li a {
-                display: block;
-                text-decoration: none;
-                color: white;
-                padding: 10px;
-            }
+        table {
+            width: 100%;
+            border: none;
+        }
 
-            .dashboard_sidebar ul li a:hover {
-                background-color: black;
-            }
+        th {
+            border-top: 4px solid darkblue;
+        }
 
-            .dashboard_main {
-                margin-left: 200px;
-                padding: 30px;
-            }
+        tr, th, td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid blue;
+        }
 
-            table{
-                width:100%;
-                border:none;
-            }
+        td {
+            background-color: lightblue;
+        }
 
-            th{
-                border-top:4px solid darkblue;
-            }
+        .update {
+            background-color: lightgreen;
+            text-decoration: none;
+            padding: 10px;
+        }
 
-            tr,th,td{
-                padding:10px;
-                text-align:center;
-                border-bottom:2px solid blue;
-            }
+        .delete {
+            background-color: lightcoral;
+            text-decoration: none;
+            padding: 10px;
+        }
+    </style>
+</head>
 
-            td{
-                background-color:lightblue;
-            }
+<body>
 
-            .update{
-                background-color:lightgreen;
-                text-decoration:none;
-                padding:10px;
-            }
+<div class="dashboard_sidebar">
+    <ul>
+        <li><a href="myorders.php">My Orders</a></li>
+        <li><a href="index.php">Shop</a></li>
+        <li><a href="../logout.php">Logout</a></li>
+    </ul>
+</div>
 
-            .delete{
-                background-color:lightcoral;
-                text-decoration:none;
-                padding:10px;
-            }
+<div class="dashboard_main">
 
-        </style>
-    </head>
-
-    <body>
-
-
-    <div class="dashboard_sidebar">
-            <ul> 
-                 <li><a href="index.php">Shop</a> </li>
-                <li><a href="myorders.php">My Order</a> </li>
-                               
-                <li><a href="logout.php">Logout</a> </li> 
-            </ul>
-        </div>
-       
-        <div class="dashboard_main">
-            <p>Welcome to the user Dashboard!</p> 
+    <h2>My Orders</h2>
 
     <table>
         <thead>
             <tr>
-                <th>Order id</th>
-                <th>User id</th>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Product Image</th>
+                <th>Product Price</th>
+                <th>Quantity</th>
                 <th>Total Amount</th>
-                <th>Payment Method</th>
-                 
             </tr>
         </thead>
 
         <tbody>
-            <?php 
-            while($row=mysqli_fetch_assoc($result)){
-
-            
+            <?php
+            if ($result && mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    ?>
+                    <tr>
+                        <td><?php echo $row['product_id']; ?></td>
+                        <td><?php echo $row['product_name']; ?></td>
+                        <td><img src="image/<?php echo $row['product_image']; ?>" alt="Product Image" width="50"></td>
+                        <td><?php echo $row['product_price']; ?> TK</td>
+                        <td><?php echo $row['product_quantity']; ?></td>
+                        <td><?php echo $row['total_amount']; ?> TK</td>
+                    </tr>
+                    <?php
+                }
+            } else {
+                echo "<tr><td colspan='6'>No orders found</td></tr>";
+            }
             ?>
-            <tr>
-                <td><?php echo $row['order_id'] ?></td>
-                <td><?php echo $row['user_id'] ?>  </td>
-                <td><?php echo $row['total_amount'] ?>  </td>
-                <td><?php echo $row['payment_method'] ?>  </td>
-                
-            </tr>
-            <?php } ?>
         </tbody>
-
     </table>
 
-    </div>
+</div>
 
-    </body>
+</body>
 
 </html>

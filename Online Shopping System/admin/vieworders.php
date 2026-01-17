@@ -5,10 +5,12 @@ include '../db.php';
 
 if (isset($_SESSION['user_id'])) {
 
-    $Sql = "SELECT * FROM single_order"; 
-    $result = mysqli_query($conn, $Sql);
+    $sql = "SELECT single_order.user_id, single_order.product_id, single_order.product_quantity, single_order.total_amount, products.name as product_name, products.image as product_image, products.price as product_price 
+            FROM single_order
+            JOIN products ON single_order.product_id = products.id"; 
 
     if ($_SESSION['user_role'] == 'admin') {
+        $result = mysqli_query($conn, $sql);
 
         if (!$result) {
             echo "ERROR! : {$conn->error}";
@@ -28,10 +30,8 @@ if (isset($_SESSION['user_id'])) {
 
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>ASHTASY BD</title>
-
     <style>
         * {
             margin: 0;
@@ -113,15 +113,15 @@ if (isset($_SESSION['user_id'])) {
 
 <div class="dashboard_main">
 
-
     <table>
         <thead>
             <tr>
-                <th>User id</th>
-                <th>Product id</th>
-                <th>Product Quantity</th>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Product Image</th>
+                <th>Product Price</th>
+                <th>Quantity</th>
                 <th>Total Amount</th>
-            
             </tr>
         </thead>
 
@@ -131,15 +131,17 @@ if (isset($_SESSION['user_id'])) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     ?>
                     <tr>
-                        <td><?php echo $row['user_id']; ?></td>
                         <td><?php echo $row['product_id']; ?></td>
+                        <td><?php echo $row['product_name']; ?></td>
+                        <td><img src="../image/<?php echo $row['product_image']; ?>" alt="Product Image" width="50"></td>
+                        <td><?php echo $row['product_price']; ?> TK</td>
                         <td><?php echo $row['product_quantity']; ?></td>
-                        <td><?php echo $row['total_amount']; ?></td>
+                        <td><?php echo $row['total_amount']; ?> TK</td>
                     </tr>
                     <?php
                 }
             } else {
-                echo "<tr><td colspan='4'>No orders found</td></tr>";
+                echo "<tr><td colspan='6'>No orders found</td></tr>";
             }
             ?>
         </tbody>
