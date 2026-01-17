@@ -5,8 +5,7 @@ include '../db.php';
 
 if (isset($_SESSION['user_id'])) {
 
-    // Change to query the correct table for orders
-    $Sql = "SELECT * FROM orders";  // Assuming your orders table is called 'orders'
+    $Sql = "SELECT * FROM orders"; 
     $result = mysqli_query($conn, $Sql);
 
     if ($_SESSION['user_role'] == 'admin') {
@@ -14,7 +13,7 @@ if (isset($_SESSION['user_id'])) {
         if (!$result) {
             echo "ERROR! : {$conn->error}";
         } else {
-            // Data processing is happening in the table below
+
         }
 
     } else {
@@ -127,7 +126,6 @@ if (isset($_SESSION['user_id'])) {
 
         <tbody>
             <?php
-            // Check if the query returned any rows
             if ($result && mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     ?>
