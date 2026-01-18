@@ -43,4 +43,4 @@ To get this project up and running locally, follow these steps:
 5. Update the database connection details in db/db.php: $conn = new mysqli('localhost', 'root', '', 'onlineshopdb');
 6. Open your browser and navigate to localhost/webtech_project/.
 
-written by: [@Fahim Chowdhury](https://github.com/Ratul11012)
+ [Fahim Chowdhury](https://github.com/Ratul11012)
