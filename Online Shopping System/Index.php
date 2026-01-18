@@ -235,6 +235,35 @@ $result_category = mysqli_query($conn, $sql_category);
             color: black;
         }
 
+
+       /* input type design */ 
+
+        input[type="number"] {
+        width: 60%; 
+        padding: 6px; 
+        font-size: 12px;
+        margin-top: 5px;
+        }
+
+        input[type="number"]::placeholder {
+        font-size: 10px; 
+        color: #888;
+        padding-left: 20px;
+        }
+
+        input[type="submit"] {
+        background-color: #ed7b61; 
+        color: white; 
+        padding: 10px 20px;
+        border: none; 
+        border-radius: 5px; 
+        cursor: alias; 
+    }
+
+    input[type="submit"]:hover {
+        background-color: #ff1100; 
+    }
+
         </style>
 
     </head>
@@ -281,12 +310,11 @@ $result_category = mysqli_query($conn, $sql_category);
 
   <?php 
     while ($row_product_category = mysqli_fetch_assoc($result_product_category)) {
-?>
+  ?>
     <div class="product"> 
         <img src="image/<?php echo $row_product_category['image']; ?>" alt="productImg">
         <h2><?php echo $row_product_category['name']; ?></h2>
         <p><?php echo $row_product_category['description']; ?></p>
-        <p><?php echo $row_product_category['stock']; ?></p>
         <p class="productPrice">TK. <?php echo $row_product_category['price']; ?> </p>
 
         <?php
