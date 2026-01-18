@@ -32,3 +32,10 @@ To get this project up and running locally, follow these steps:
 - **MySQL** for database management
 - **XAMPP**  for local server setup  
 
+### **Steps to Install:**
+
+1. Clone the repository:
+   
+   git clone https://github.com/Ratul11012/webtech_project.git
+2. Move the project to your htdocs or www folder (if using XAMPP or similar).
+3. Create a new database in MySQL: CREATE DATABASE onlineshopdb;
