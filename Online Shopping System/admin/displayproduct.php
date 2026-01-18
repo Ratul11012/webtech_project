@@ -81,44 +81,100 @@ else{
             }
 
             table {
-                width: 80%; 
+                width: 80%;
+                margin: 10px auto;
                 border-collapse: collapse;
-                margin: 20px auto; 
-                table-layout: fixed; 
+                table-layout: fixed;
+                border-radius: 10px;
+                margin-right:60px;
             }
 
             th, td {
-                padding: 8px; 
+                padding: 12px;
                 text-align: center;
-                border-bottom: 2px solid blue;
-                word-wrap: break-word; 
-           } 
+                border: 1px solid #e0e0e0;
+                word-wrap: break-word;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-size: 14px;
+            }
 
             th {
-               border-top: 4px solid darkblue;
-               background-color: lightgray;
+                background-color: #2196F3;
+                color: white;
+                font-weight: bold;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
             }
 
             td {
-              background-color: lightblue;
+                background-color: #fafafa;
+                color: #333;
+                border-bottom: 2px solid #e0e0e0;
+                border-radius: 8px;
             }
 
             td img {
-              max-width: 100%;
-              height: auto;
+               max-width: 70%;
+               height: auto;
+               display: block;
+               margin: 0 auto;
+               border-radius: 8px;
             }
 
-            .update{
-                background-color:lightgreen;
-                text-decoration:none;
-                padding:8px;
+            tr:nth-child(even) td {
+               background-color: #f9f9f9;
             }
 
-            .delete{
-                background-color:lightcoral;
-                text-decoration:none;
-                padding:8px;
+            tr:hover td {
+               background-color: #e1f5fe;
+               cursor: pointer;
             }
+            
+
+            a{
+              display: inline-block; /* Make the links behave like buttons */
+              padding: 10px 20px;
+              border-radius: 5px;
+              font-size: 14px;
+              cursor: pointer;
+              text-decoration: none; /* Remove underline from links */
+              font-weight: bold;
+              min-width: 80px;
+              text-align: center;
+            }          
+
+            .update {
+              background-color: #4CAF50;
+              color: white;
+            }
+
+            .update:hover {
+              background-color: #45a049;
+              box-shadow: 0 6px 12px rgba(0, 128, 0, 0.3);
+            }
+
+            .update:active {
+              background-color: #388e3c;
+              box-shadow: 0 2px 6px rgba(0, 128, 0, 0.1);
+            }
+
+
+            .delete {
+              background-color: #f44336;
+              color: white;
+              box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
+            }
+
+            .delete:hover {
+              background-color: #e53935;
+              box-shadow: 0 6px 12px rgba(255, 0, 0, 0.3);
+            }
+
+            .delete:active {
+              background-color: #c62828;
+              box-shadow: 0 2px 6px rgba(255, 0, 0, 0.1);
+            }
+
 
         </style>
     </head>
@@ -151,8 +207,8 @@ else{
                 <th>Stock</th>
                 <th>Image</th>
                 <th>Category Name</th>
-                <th>Action</th>
-                <th>Action</th>
+                <th>Modify</th>
+                <th>Delete</th>
             </tr>
         </thead>
 
