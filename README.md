@@ -22,3 +22,13 @@ This online shopping system is built using **PHP**, **MySQL**, **HTML**, **JavaS
 - **Responsive Design**: The platform is designed to be responsive and accessible across various devices.
 
 ---
+
+## **Installation**
+
+To get this project up and running locally, follow these steps:
+### **Prerequisites:**
+- A **web server** (e.g., Apache)
+- **PHP** version 7.4 or higher
+- **MySQL** for database management
+- **XAMPP**  for local server setup  
+
