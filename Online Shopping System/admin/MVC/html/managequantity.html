@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Product Quantity - ASHTASY BD</title>
+    <link rel="stylesheet" href="../css/managequantity.css">
+    <link rel="stylesheet" href="../css/darkmode.css">
+</head>
+
+<body>
+
+<center>
+    <h3 id="pagetitle">Light Mode</h3>
+    <button id="switchbutton" onclick="toggle()">Switch to Dark Mode</button>
+</center>
+
+<div class="dashboard_sidebar">
+    <ul>
+         <li><a href="../php/manageuser.php">User Management</a></li>
+        <li><a href="../php/addproduct.php">Add Product</a></li>
+        <li><a href="../php/displayproduct.php">View Products</a></li>
+        <li><a href="../php/vieworders.php">View Orders</a></li>
+        <li><a href="../php/managequantity.php">Manage Quantity</a></li>      
+        <li><a href="../php/logout.php">Logout</a></li>
+    </ul>
+</div>
+
+<div class="dashboard_main">
+    <h2>Manage Product Quantities</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Product Image</th>
+                <th>Current Stock</th>
+                <th>Update Quantity</th>
+                <th>Low Stock Alert</th>
+            </tr>
+        </thead>
+        <tbody id="quantity_table_body">
+        </tbody>
+    </table>
+</div>
+
+<script src="../js/darkmode.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update Product - ASHTASY BD</title>
+        <link rel="stylesheet" href="../css/updateproduct.css">
+        <link rel="stylesheet" href="../css/darkmode.css">
+    </head>
+
+
+    <body>
+
+        <center>
+            <h3 id="pagetitle">Light Mode</h3>
+            <button id="switchbutton" onclick="toggle()">Switch to Dark Mode</button>
+        </center>
+
+        <div class="dashboard_sidebar">
+            <ul> 
+                <li><a href="../php/manageuser.php">User Management</a></li>
+                <li><a href="../php/addproduct.php">Add Product</a> </li>
+                <li><a href="../php/displayproduct.php">View Products</a> </li>
+                <li><a href="../php/managequantity.php">Manage Quantity</a></li> 
+                <li><a href="../php/vieworders.php">View Orders</a></li>
+                <li><a href="../php/logout.php">Logout</a> </li> 
+            </ul>
+        </div>
+       
+
+        <div class="dashboard_main">
+     
+                <form action="../php/updateproduct.php" method="post" enctype="multipart/form-data" id="update_form">
+
+                <input type="text" name="name" id="product_name">
+                
+                <textarea name="description" id="product_description"></textarea>
+
+                <input type="number" name="price" id="product_price">
+                <input type="number" name="stock" id="product_stock">
+                
+                <img id="product_image" src="" alt="" style="max-width: 200px; max-height: 200px; object-fit: cover;">
+
+                <input type="file" name="image">
+
+                <h1 id="category_display"> Category Name Is: </h1>
+                 <select name="category_name" id="category_select">
+                </select>
+
+                <input type="submit" class="button" name="submit" value="add product">
+                 
+                </form>
+        </div>
+
+        <script src="../js/darkmode.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Product - ASHTASY BD</title>
+        <link rel="stylesheet" href="../css/addproduct.css">
+        <link rel="stylesheet" href="../css/darkmode.css">
+    </head>
+
+
+    <body>
+
+        <center>
+            <h3 id="pagetitle">Light Mode</h3>
+            <button id="switchbutton" onclick="toggle()">Switch to Dark Mode</button>
+        </center>
+
+        <div class="dashboard_sidebar">
+            <ul> 
+                <li><a href="../php/manageuser.php">User Management</a></li>
+                <li><a href="../php/addproduct.php">Add Product</a> </li>
+                <li><a href="../php/displayproduct.php">View Products</a> </li>
+                <li><a href="../php/managequantity.php">Manage Quantity</a></li> 
+                <li><a href="../php/vieworders.php">View Orders</a></li>
+                <li><a href="../php/logout.php">Logout</a> </li> 
+            </ul>
+        </div>
+       
+
+        <div class="dashboard_main">
+     
+                <form action="../php/addproduct.php" method="post" enctype="multipart/form-data">
+
+                <h1> Enter Product Details: </h1> <br>
+
+                <input type="text" name="name" placeholder="Enter product name" required>
+                
+                <textarea name="description" placeholder="Enter product description" required></textarea>
+
+                <input type="number" name="price" placeholder="Enter product price here!" required>
+                <input type="number" name="stock" placeholder="Enter stock number" required>
+
+                <h2> Select Product Image: </h2>
+                <input type="file" name="image" required>
+
+                <h2>Select Product Category:</h2>
+                <select name="category_name" id="category_select" required>
+                </select>
+
+                <input type="submit" class="button" name="submit" value="add product">
+                 
+                </form>
+        </div>
+
+        <script src="../js/darkmode.js"></script>
+    </body>
+
+</html>
