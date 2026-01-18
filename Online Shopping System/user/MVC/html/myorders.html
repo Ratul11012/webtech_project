@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Orders - ASHTASY BD</title>
+    <link rel="stylesheet" href="../css/myorders.css">
+    <link rel="stylesheet" href="../css/darkmode.css">
+</head>
+
+<body>
+
+<center>
+    <h3 id="pagetitle">Light Mode</h3>
+    <button id="switchbutton" onclick="toggle()">Switch to Dark Mode</button>
+</center>
+
+<div class="dashboard_sidebar">
+    <ul>
+        <li><a href="../php/myorders.php">My Orders</a></li>
+        <li><a href="../php/index.php">Shop</a></li>
+        <li><a href="../php/logout.php">Logout</a></li>
+    </ul>
+</div>
+
+<div class="dashboard_main">
+
+    <h2>My Orders</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Product Image</th>
+                <th>Product Price</th>
+                <th>Quantity</th>
+                <th>Total Amount</th>
+            </tr>
+        </thead>
+
+        <tbody id="orders_table_body">
+        </tbody>
+    </table>
+
+</div>
+
+<script src="../js/darkmode.js"></script>
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 <?php
 session_start();  
 
-include 'db.php';
+include '../db/db.php';
 
 if(!isset($_SESSION['user_id'])){
     header("Location: index.php");

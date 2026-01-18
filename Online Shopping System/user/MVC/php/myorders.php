@@ -1,8 +1,7 @@
 <?php
 session_start();
 
-include 'db.php';
-include 'Include/darkmode.php';
+include '../db/db.php';
 
 if (isset($_SESSION['user_id'])) {
 
@@ -20,7 +19,7 @@ if (isset($_SESSION['user_id'])) {
     }
 
 } else {
-    header("Location: ../index.php");
+    header("Location: index.php");
     exit();
 }
 ?>
@@ -29,81 +28,22 @@ if (isset($_SESSION['user_id'])) {
 <html>
 <head>
     <title>My Orders - ASHTASY BD</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        .dashboard_sidebar {
-            position: fixed;
-            top: 0;
-            background-color: darkcyan;
-            width: 200px;
-            height: 100%;
-        }
-
-        .dashboard_sidebar ul li {
-            list-style: none;
-            text-align: center;
-        }
-
-        .dashboard_sidebar ul li a {
-            display: block;
-            text-decoration: none;
-            color: white;
-            padding: 10px;
-        }
-
-        .dashboard_sidebar ul li a:hover {
-            background-color: black;
-        }
-
-        .dashboard_main {
-            margin-left: 200px;
-            padding: 30px;
-        }
-
-        table {
-            width: 100%;
-            border: none;
-        }
-
-        th {
-            border-top: 4px solid darkblue;
-        }
-
-        tr, th, td {
-            padding: 10px;
-            text-align: center;
-            border-bottom: 2px solid blue;
-        }
-
-        td {
-            background-color: lightblue;
-        }
-
-        .update {
-            background-color: lightgreen;
-            text-decoration: none;
-            padding: 10px;
-        }
-
-        .delete {
-            background-color: lightcoral;
-            text-decoration: none;
-            padding: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/myorders.css">
+    <link rel="stylesheet" href="../css/darkmode.css">
 </head>
 
 <body>
+
+<center>
+    <h3 id="pagetitle">Light Mode</h3>
+    <button id="switchbutton" onclick="toggle()">Switch to Dark Mode</button>
+</center>
 
 <div class="dashboard_sidebar">
     <ul>
         <li><a href="myorders.php">My Orders</a></li>
         <li><a href="index.php">Shop</a></li>
-        <li><a href="../logout.php">Logout</a></li>
+        <li><a href="logout.php">Logout</a></li>
     </ul>
 </div>
 
@@ -131,7 +71,7 @@ if (isset($_SESSION['user_id'])) {
                     <tr>
                         <td><?php echo $row['product_id']; ?></td>
                         <td><?php echo $row['product_name']; ?></td>
-                        <td><img src="image/<?php echo $row['product_image']; ?>" alt="Product Image" width="50"></td>
+                        <td><img src="../images/<?php echo $row['product_image']; ?>" alt="Product Image" width="50"></td>
                         <td><?php echo $row['product_price']; ?> TK</td>
                         <td><?php echo $row['product_quantity']; ?></td>
                         <td><?php echo $row['total_amount']; ?> TK</td>
@@ -147,6 +87,7 @@ if (isset($_SESSION['user_id'])) {
 
 </div>
 
+<script src="../js/darkmode.js"></script>
 </body>
 
 </html>
