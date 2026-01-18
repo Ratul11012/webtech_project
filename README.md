@@ -11,4 +11,9 @@ This online shopping system is built using **PHP**, **MySQL**, **HTML**, **JavaS
 - **Order Management**: View and update the status of user orders (e.g., pending, confirmed, shipped, delivered).
 - **Inventory Control**: Manage stock levels for products.
 
+### **User Features:**
+- **Product Browsing**: Search products and view by category.
+- **Shopping Cart Management**: Add products to the cart, update quantities, and remove items.
+- **Order Placement**: Proceed to checkout and place orders.
+- **Account Management**: View and update personal profile information.
 
