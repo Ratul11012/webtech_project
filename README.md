@@ -17,3 +17,8 @@ This online shopping system is built using **PHP**, **MySQL**, **HTML**, **JavaS
 - **Order Placement**: Proceed to checkout and place orders.
 - **Account Management**: View and update personal profile information.
 
+### **Additional Features:**
+- **Dark Mode**: A light/dark mode toggle is available for a better user experience.
+- **Responsive Design**: The platform is designed to be responsive and accessible across various devices.
+
+---
