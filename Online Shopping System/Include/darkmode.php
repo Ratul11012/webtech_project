@@ -33,16 +33,16 @@ if (!isset($_SESSION['theme'])) {
             cursor: pointer;
             margin-top: 20px;
             border-radius: 5px;
-            background-color: #5e94b8;
-            color: white;
+            background-color: #00000000;
+            color: black;
             position: fixed; 
            /* bottom: 600px;  */
-           top: 60px;
+            top: 60px;
             right: 30px;  
         }
 
         button:hover {
-            background-color: #FFD700;
+            background-color: #ff7700;
         }
         
     </style>
