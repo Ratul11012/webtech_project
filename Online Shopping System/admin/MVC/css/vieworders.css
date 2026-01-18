@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard_sidebar {
+    position: fixed;
+    top: 0;
+    background-color: darkcyan;
+    width: 200px;
+    height: 100%;
+}
+
+.dashboard_sidebar ul li {
+    list-style: none;
+    text-align: center;
+}
+
+.dashboard_sidebar ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.dashboard_sidebar ul li a:hover {
+    background-color: black;
+}
+
+.dashboard_main {
+    margin-left: 200px;
+    padding: 30px;
+}
+
+table {
+    width: 100%;
+    border: none;
+}
+
+th {
+    border-top: 4px solid darkblue;
+}
+
+tr, th, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid blue;
+}
+
+td {
+    background-color: lightblue;
+}
+
+.update {
+    background-color: lightgreen;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.delete {
+    background-color: lightcoral;
+    text-decoration: none;
+    padding: 10px;
+}
