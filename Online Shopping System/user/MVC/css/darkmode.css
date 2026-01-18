@@ -1,0 +1,29 @@
+/*light mode*/
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+#switchbutton {
+    padding: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #00000000;
+    color: black;
+    position: fixed; 
+    top: 60px;
+    right: 30px;
+    z-index: 9999;
+}
+
+#switchbutton:hover {
+    background-color: #ff7700;
+}

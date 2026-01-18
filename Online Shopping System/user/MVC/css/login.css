@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0d1553a7, #ffd752ff);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.brandName {
+    font-size: 40px;
+    color: #ffd752ff;
+    text-decoration: none;
+    font-family: 'Lucida Handwriting', cursive;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+
+   
+.login {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+    width: 380px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.login input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background: #333;
+    border: 2px solid #5e94b8;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+
+}
+
+  
+
+.button {
+    padding: 15px;
+    background: #5e94b8;
+    border: 2px solid #5e94b8;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #ffd752ff;
+    transform: scale(1.05);
+    border-color: #ffd752ff;
+}
+
+
+.login p {
+    color: #ddd;
+    margin-top: 20px;
+    font-size: 14px;
+}
