@@ -1,4 +1,4 @@
-/* General body styling */
+ 
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -7,14 +7,14 @@ body {
     color: #333;
 }
 
-/* Header styling */
+ 
 h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
 }
 
-/* Cart table styling */
+ 
 table {
     width: 100%;
     border-collapse: collapse;
@@ -44,7 +44,7 @@ table tr:hover td {
     background-color: #f1f1f1;
 }
 
-/* Links (for Remove) */
+ 
 a {
     text-decoration: none;
     color: red;
@@ -55,7 +55,7 @@ a:hover {
     color: darkred;
 }
 
-/* Total price styling */
+ 
 p {
     font-size: 18px;
     font-weight: bold;
@@ -65,7 +65,7 @@ p {
 }
 
 
-/* Checkout button styling */
+ 
 button {
     background-color: #4CAF50;
     color: white;
@@ -82,13 +82,13 @@ button:hover {
     background-color: #45a049;
 }
 
-/* Checkout form styling */
+ 
 form {
     text-align: center;
     margin-top: 20px;
 }
 
-/* Form inputs styling */
+ 
 input[type="text"], input[type="number"], textarea {
     padding: 10px;
     font-size: 14px;
@@ -99,12 +99,12 @@ input[type="text"], input[type="number"], textarea {
     border: 1px solid #ccc;
 }
 
-/* Radio buttons styling */
+ 
 input[type="radio"] {
     margin-right: 10px;
 }
 
-/* Continue Shopping link styling */
+ 
 a {
     font-size: 16px;
     color: #4CAF50;
@@ -118,7 +118,7 @@ a:hover {
     color: #45a049;
 }
 
-/* Footer styling */
+ 
 footer {
     margin-top: 40px;
     text-align: center;
