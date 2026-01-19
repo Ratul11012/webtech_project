@@ -66,7 +66,7 @@ if (!$result_product_category) {
         while ($row_product_category = mysqli_fetch_assoc($result_product_category)) {
         ?>
             <div class="product">
-                <img src="../images/<?php echo $row_product_category['image']; ?>" alt="productImg">
+                <img src="../images/<?php echo $row_product_category['image']; ?>" alt="">
                 <h2><?php echo $row_product_category['name']; ?></h2>
                 <p><?php echo $row_product_category['description']; ?></p>
                 <p class="productPrice">TK. <?php echo $row_product_category['price']; ?> </p>
