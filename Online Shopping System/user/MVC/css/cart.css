@@ -118,3 +118,10 @@ a:hover {
     color: #45a049;
 }
 
+/* Footer styling */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+}
