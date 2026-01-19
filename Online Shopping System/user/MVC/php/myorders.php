@@ -1,15 +1,17 @@
 <?php
 session_start();
 
-include '../db/db.php';
+include '../db/db.php'; // Database connection
 
+// Check if user is logged in
 if (isset($_SESSION['user_id'])) {
-
     $user_id = $_SESSION['user_id'];
 
-    $sql = "SELECT single_order.product_id, single_order.product_quantity, single_order.total_amount, products.name as product_name, products.image as product_image, products.price as product_price 
-            FROM single_order
-            JOIN products ON single_order.product_id = products.id
+    // Fetch orders for the logged-in user
+    $sql = "SELECT single_order.product_id, single_order.product_quantity, single_order.total_amount, 
+                   products.name AS product_name, products.image AS product_image, products.price AS product_price 
+            FROM single_order 
+            JOIN products ON single_order.product_id = products.id 
             WHERE single_order.user_id = '$user_id'"; 
 
     $result = mysqli_query($conn, $sql);
@@ -17,15 +19,13 @@ if (isset($_SESSION['user_id'])) {
     if (!$result) {
         echo "ERROR! : {$conn->error}";
     }
-
 } else {
-    header("Location: index.php");
+    header("Location: login.php");
     exit();
 }
 ?>
 
 <!DOCTYPE html>
-<html>
 <head>
     <title>My Orders - ASHTASY BD</title>
     <link rel="stylesheet" href="../css/myorders.css">
@@ -41,8 +41,9 @@ if (isset($_SESSION['user_id'])) {
 
 <div class="dashboard_sidebar">
     <ul>
+         <li><a href="index.php">Shop</a></li>
         <li><a href="myorders.php">My Orders</a></li>
-        <li><a href="index.php">Shop</a></li>
+        <li><a href="cart.php">Cart Items</a> </li>
         <li><a href="logout.php">Logout</a></li>
     </ul>
 </div>
@@ -54,10 +55,9 @@ if (isset($_SESSION['user_id'])) {
     <table>
         <thead>
             <tr>
-                <th>Product ID</th>
                 <th>Product Name</th>
                 <th>Product Image</th>
-                <th>Product Price</th>
+                <th>Price</th>
                 <th>Quantity</th>
                 <th>Total Amount</th>
             </tr>
@@ -69,7 +69,6 @@ if (isset($_SESSION['user_id'])) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     ?>
                     <tr>
-                        <td><?php echo $row['product_id']; ?></td>
                         <td><?php echo $row['product_name']; ?></td>
                         <td><img src="../images/<?php echo $row['product_image']; ?>" alt="Product Image" width="50"></td>
                         <td><?php echo $row['product_price']; ?> TK</td>
@@ -79,7 +78,7 @@ if (isset($_SESSION['user_id'])) {
                     <?php
                 }
             } else {
-                echo "<tr><td colspan='6'>No orders found</td></tr>";
+                echo "<tr><td colspan='5'>No orders found</td></tr>";
             }
             ?>
         </tbody>
