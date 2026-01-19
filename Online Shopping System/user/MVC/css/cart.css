@@ -99,3 +99,8 @@ input[type="text"], input[type="number"], textarea {
     border: 1px solid #ccc;
 }
 
+/* Radio buttons styling */
+input[type="radio"] {
+    margin-right: 10px;
+}
+
