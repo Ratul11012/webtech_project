@@ -62,3 +62,13 @@ if (isset($_POST['confirm_order'])) {
             exit();
         }
     }
+// Optionally, update the stock in the products table
+    foreach ($_SESSION['cart'] as $product_id => $cart_item) {
+        $product_quantity = $cart_item['quantity'];
+        $update_stock_sql = "UPDATE products SET stock = stock - $product_quantity WHERE id = '$product_id'";
+        if (!mysqli_query($conn, $update_stock_sql)) {
+            echo "Error: " . mysqli_error($conn);
+            exit();
+        }
+    }
+
