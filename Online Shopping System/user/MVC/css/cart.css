@@ -114,3 +114,7 @@ a {
     margin-top: 20px;
 }
 
+a:hover {
+    color: #45a049;
+}
+
