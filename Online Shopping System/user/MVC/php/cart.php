@@ -121,6 +121,20 @@ if (isset($_GET['remove_product'])) {
                     <?php endforeach; ?>
             </tbody>
         </table>
+        <p>Total Amount: <?php echo $total_amount; ?> TK</p>
+
+        <form action="cart.php" method="post">
+            <button type="submit" name="confirm_order">Confirm Order</button>
+        </form>
+
+        <!-- Continue Shopping button -->
+        <a href="index.php">
+            <button>Continue Shopping</button>
+        </a>
+    <?php else: ?>
+        <p>Your cart is empty!</p>
+    <?php endif; ?>
+
 
 
 
