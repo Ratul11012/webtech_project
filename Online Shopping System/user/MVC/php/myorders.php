@@ -1,13 +1,13 @@
 <?php
 session_start();
 
-include '../db/db.php'; // Database connection
+include '../db/db.php'; 
 
-// Check if user is logged in
+
 if (isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
 
-    // Fetch orders for the logged-in user
+    
     $sql = "SELECT single_order.product_id, single_order.product_quantity, single_order.total_amount, 
                    products.name AS product_name, products.image AS product_image, products.price AS product_price 
             FROM single_order 
