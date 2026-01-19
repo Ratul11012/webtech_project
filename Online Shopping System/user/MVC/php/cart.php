@@ -89,3 +89,16 @@ if (isset($_GET['remove_product'])) {
 
 
 ?>
+
+<!DOCTYPE html>
+<head>
+    <title>Your Cart - ASHTASY BD</title>
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+    <h1>Your Cart</h1>
+
+
+
+    </body>
+</html>
