@@ -44,3 +44,14 @@ table tr:hover td {
     background-color: #f1f1f1;
 }
 
+/* Links (for Remove) */
+a {
+    text-decoration: none;
+    color: red;
+    font-size: 14px;
+}
+
+a:hover {
+    color: darkred;
+}
+
