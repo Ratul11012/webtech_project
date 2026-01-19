@@ -79,6 +79,13 @@ if (isset($_POST['confirm_order'])) {
     exit();
 }
 
+// Remove product from cart
+if (isset($_GET['remove_product'])) {
+    $product_id = $_GET['remove_product'];
+    unset($_SESSION['cart'][$product_id]);
+    header("Location: cart.php");
+    exit();
+}
 
 
 ?>
