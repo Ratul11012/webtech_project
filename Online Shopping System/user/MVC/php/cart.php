@@ -72,3 +72,10 @@ if (isset($_POST['confirm_order'])) {
         }
     }
 
+ // Clear the cart after successful order
+    $_SESSION['cart'] = [];
+    echo "<h2>Order Confirmed!</h2><p>Your order has been placed successfully.</p>";
+    header("Location: myorders.php");  // Redirect to my orders page
+    exit();
+}
+?>
