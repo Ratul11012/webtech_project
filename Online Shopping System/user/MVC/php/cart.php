@@ -48,4 +48,17 @@ if (isset($_POST['confirm_order'])) {
     $size = $_POST['size'];
     $address = $_POST['address'];
 
-   
+    // Insert each product in the cart as an individual order entry in the single_order table
+    foreach ($_SESSION['cart'] as $product_id => $cart_item) {
+        $product_quantity = $cart_item['quantity'];
+        $product_price = $cart_item['price'];
+        $total_item_amount = $product_quantity * $product_price;
+
+        $sql = "INSERT INTO single_order (user_id, product_id, product_quantity, total_amount) 
+                VALUES ('$user_id', '$product_id', '$product_quantity', '$total_item_amount')";
+
+        if (!mysqli_query($conn, $sql)) {
+            echo "Error: " . mysqli_error($conn);
+            exit();
+        }
+    }
