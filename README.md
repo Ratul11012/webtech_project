@@ -70,5 +70,12 @@ ashtasy-bd/
 ├── images/                   # Product images and other media
 └── index.php                 # Main landing page
 
+## 🏗️ Architecture
+
+The project follows the **MVC (Model-View-Controller)** architectural pattern:
+
+- **Model**: Handles data logic and database operations (located in `*/models/`)
+- **View**: Presentation layer - HTML/PHP templates (located in `*/php/`)
+- **Controller**: Processes user input and coordinates between Model and View (located in `*/controllers/`)
 
  [Fahim Chowdhury](https://github.com/Ratul11012)
