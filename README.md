@@ -73,9 +73,21 @@ ashtasy-bd/
 ## 🏗️ Architecture
 
 The project follows the **MVC (Model-View-Controller)** architectural pattern:
+**Model**: Handles data logic and database operations (located in `*/models/`)
+**View**: Presentation layer - HTML/PHP templates (located in `*/php/`)
+**Controller**: Processes user input and coordinates between Model and View (located in `*/controllers/`)
+**Usage**
+**Admin Panel:**
+Navigate to localhost/ashtasy-bd/php/dashboard.php after logging in as an admin.
+Admins can manage users, add/update/delete products, view orders, and manage inventory.
+**User Panel:**
 
-- **Model**: Handles data logic and database operations (located in `*/models/`)
-- **View**: Presentation layer - HTML/PHP templates (located in `*/php/`)
-- **Controller**: Processes user input and coordinates between Model and View (located in `*/controllers/`)
+Users can browse products, add them to the cart, and place orders via the index.php page.
+Technologies Used
+PHP (Backend)
+MySQL (Database)
+HTML/CSS (Frontend)
+JavaScript (Dark mode toggle)
+XAMPP or MAMP for local development (optional)
 
- [Fahim Chowdhury](https://github.com/Ratul11012)
+[Fahim Chowdhury](https://github.com/Ratul11012)
