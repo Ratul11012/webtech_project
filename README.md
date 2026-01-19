@@ -8,7 +8,7 @@ This online shopping system is built using **PHP**, **MySQL**, **HTML**, **JavaS
 ### **Admin Features:**
 - **User Management**: View, activate, deactivate, or delete user accounts.
 - **Product Management**: Add, update, delete products and manage categories.
-- **Order Management**: View and update the status of user orders (e.g., pending, confirmed, shipped, delivered).
+- **Order Management**: The user will order chosen products, and the admin can view them.
 - **Inventory Control**: Manage stock levels for products.
 
 ### **User Features:**
