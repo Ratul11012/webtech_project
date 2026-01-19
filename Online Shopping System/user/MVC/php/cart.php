@@ -98,7 +98,19 @@ if (isset($_GET['remove_product'])) {
 <body>
     <h1>Your Cart</h1>
 
-
+<?php if (!empty($_SESSION['cart'])): ?>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                
 
     </body>
 </html>
