@@ -78,4 +78,7 @@ if (isset($_POST['confirm_order'])) {
     header("Location: myorders.php");  // Redirect to my orders page
     exit();
 }
+
+
+
 ?>
