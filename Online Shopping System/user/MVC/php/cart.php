@@ -38,3 +38,14 @@ foreach ($_SESSION['cart'] as $cart_item) {
     $total_amount += $cart_item['price'] * $cart_item['quantity'];
 }
 
+// Handle order confirmation
+if (isset($_POST['confirm_order'])) {
+    // Order confirmation logic
+    // Insert order into the database (in single_order table)
+    $user_id = $_SESSION['user_id'];
+    $full_name = $_POST['full_name'];
+    $phone = $_POST['phone'];
+    $size = $_POST['size'];
+    $address = $_POST['address'];
+
+   
