@@ -1,12 +1,11 @@
 <?php
 session_start();
-include '../db/db.php'; // Database connection
+include '../db/db.php'; 
 
-// Fetch categories to display in the header
 $sql_category = "SELECT * FROM categories";
 $result_category = mysqli_query($conn, $sql_category);
 
-// Fetch products
+
 if (isset($_GET['category_name']) && $_GET['category_name'] != '') {
     $category_name = mysqli_real_escape_string($conn, $_GET['category_name']);
     $sql_product_category = "SELECT * FROM products WHERE category_name='$category_name' AND stock > 0";
@@ -75,7 +74,7 @@ if (!$result_product_category) {
                 <?php
                 if (isset($_SESSION['user_id'])) {
                 ?>  
-                <!-- Add to Cart Form -->
+               
                 <form action="cart.php" method="get">
                     <input type="hidden" name="product_id" value="<?php echo $row_product_category['id']; ?>">
                     <input type="hidden" name="product_name" value="<?php echo $row_product_category['name']; ?>">
