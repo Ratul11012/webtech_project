@@ -32,3 +32,9 @@ if (isset($_GET['product_id'])) {
     }
 }
 
+// Calculate total amount for the cart
+$total_amount = 0;
+foreach ($_SESSION['cart'] as $cart_item) {
+    $total_amount += $cart_item['price'] * $cart_item['quantity'];
+}
+
