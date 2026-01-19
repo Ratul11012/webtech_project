@@ -104,3 +104,13 @@ input[type="radio"] {
     margin-right: 10px;
 }
 
+/* Continue Shopping link styling */
+a {
+    font-size: 16px;
+    color: #4CAF50;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
