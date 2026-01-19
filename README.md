@@ -42,52 +42,11 @@ To get this project up and running locally, follow these steps:
 4. Import the SQL file from the db/ folder (if available) into the onlineshopdb database.
 5. Update the database connection details in db/db.php: $conn = new mysqli('localhost', 'root', '', 'onlineshopdb');
 6. Open your browser and navigate to localhost/webtech_project/.
-## 📁 Project Structure
-```
-ashtasy-bd/
-├── db/
-│   └── db.php                # Database connection file
-├── php/
-│   ├── addproduct.php        # Add product functionality
-│   ├── displayproduct.php    # View and manage products
-│   ├── cart.php              # Add to Cart products
-│   ├── manageuser.php        # Manage users
-│   ├── updateproduct.php     # Update product details
-│   ├── vieworders.php        # View orders
-│   └── logout.php            # Logout functionality
-├── css/
-│   ├── addproduct.css        # Add product page styles
-│   ├── cart.css              # Add to Cart styles
-│   ├── darkmode.css          # Dark mode styles
-│   ├── dashboard.css         # Admin dashboard styles
-│   ├── displayproduct.css    # Display products styles
-│   ├── login.css             # Login page styles
-│   ├── managequantity.css    # Manage quantity styles
-│   ├── manageuser.css        # Manage user styles
-│   └── register.css          # Registration page styles
-├── js/
-│   └── darkmode.js           # Script for dark mode toggle
-├── images/                   # Product images and other media
-└── index.php                 # Main landing page
-
-## 🏗️ Architecture
-
-The project follows the **MVC (Model-View-Controller)** architectural pattern:
-**Model**: Handles data logic and database operations (located in `*/models/`)
-**View**: Presentation layer - HTML/PHP templates (located in `*/php/`)
-**Controller**: Processes user input and coordinates between Model and View (located in `*/controllers/`)
-**Usage**
-**Admin Panel:**
-Navigate to localhost/ashtasy-bd/php/dashboard.php after logging in as an admin.
-Admins can manage users, add/update/delete products, view orders, and manage inventory.
-**User Panel:**
-
-Users can browse products, add them to the cart, and place orders via the index.php page.
-Technologies Used
+   **Technologies Used**
 PHP (Backend)
 MySQL (Database)
 HTML/CSS (Frontend)
 JavaScript (Dark mode toggle)
 XAMPP or MAMP for local development (optional)
-
+ 
 [Fahim Chowdhury](https://github.com/Ratul11012)
