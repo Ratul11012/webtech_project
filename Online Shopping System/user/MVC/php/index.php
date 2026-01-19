@@ -80,7 +80,7 @@ if (!$result_product_category) {
                     <input type="hidden" name="product_id" value="<?php echo $row_product_category['id']; ?>">
                     <input type="hidden" name="product_name" value="<?php echo $row_product_category['name']; ?>">
                     <input type="hidden" name="product_price" value="<?php echo $row_product_category['price']; ?>">
-                    <input type="number" name="quantity" value="1" min="1" max="<?php echo $row_product_category['stock']; ?>" placeholder="Quantity" required><br>
+                    <input type="number" name="quantity" min="1" max="<?php echo $row_product_category['stock']; ?>" placeholder="Quantity" required><br>
                     <input type="submit" name="add_to_cart" value="Buy Now">
                 </form>
                 <?php
