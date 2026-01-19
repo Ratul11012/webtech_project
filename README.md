@@ -42,5 +42,33 @@ To get this project up and running locally, follow these steps:
 4. Import the SQL file from the db/ folder (if available) into the onlineshopdb database.
 5. Update the database connection details in db/db.php: $conn = new mysqli('localhost', 'root', '', 'onlineshopdb');
 6. Open your browser and navigate to localhost/webtech_project/.
+## 📁 Project Structure
+```
+ashtasy-bd/
+├── db/
+│   └── db.php                # Database connection file
+├── php/
+│   ├── addproduct.php        # Add product functionality
+│   ├── displayproduct.php    # View and manage products
+│   ├── cart.php              # Add to Cart products
+│   ├── manageuser.php        # Manage users
+│   ├── updateproduct.php     # Update product details
+│   ├── vieworders.php        # View orders
+│   └── logout.php            # Logout functionality
+├── css/
+│   ├── addproduct.css        # Add product page styles
+│   ├── cart.css              # Add to Cart styles
+│   ├── darkmode.css          # Dark mode styles
+│   ├── dashboard.css         # Admin dashboard styles
+│   ├── displayproduct.css    # Display products styles
+│   ├── login.css             # Login page styles
+│   ├── managequantity.css    # Manage quantity styles
+│   ├── manageuser.css        # Manage user styles
+│   └── register.css          # Registration page styles
+├── js/
+│   └── darkmode.js           # Script for dark mode toggle
+├── images/                   # Product images and other media
+└── index.php                 # Main landing page
+
 
  [Fahim Chowdhury](https://github.com/Ratul11012)
