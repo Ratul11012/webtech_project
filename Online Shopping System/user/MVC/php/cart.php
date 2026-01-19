@@ -110,7 +110,19 @@ if (isset($_GET['remove_product'])) {
                 </tr>
             </thead>
             <tbody>
-                
+                <?php foreach ($_SESSION['cart'] as $product_id => $cart_item): ?>
+                    <tr>
+                        <td><?php echo $cart_item['name']; ?></td>
+                        <td><?php echo $cart_item['price']; ?> TK</td>
+                        <td><?php echo $cart_item['quantity']; ?></td>
+                        <td><?php echo $cart_item['price'] * $cart_item['quantity']; ?> TK</td>
+                        <td><a href="cart.php?remove_product=<?php echo $product_id; ?>">Remove</a></td>
+                    </tr>
+                    <?php endforeach; ?>
+            </tbody>
+        </table>
+
+
 
     </body>
 </html>
